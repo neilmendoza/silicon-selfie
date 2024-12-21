@@ -27,4 +27,5 @@
 **/*.mp4
 **/.idea
 **/*crash*.json
-
+**/bin/*
+!**/bin/data/

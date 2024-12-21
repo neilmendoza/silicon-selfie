@@ -39,7 +39,7 @@ void ofApp::setup() {
     fbx.setPosition( 0, -7, 0 );
     fbx.setScale(.1f, .1f, .1f);
     
-    //cout << fbx.getSkeletonInfo() << endl;
+    cout << fbx.getSkeletonInfo() << endl;
     
     bRenderNormals  = false;
     bRenderMeshes   = true;
@@ -77,10 +77,11 @@ void ofApp::update() {
     fbx.earlyUpdate();
 
     // perform any bone manipulation here //
-    shared_ptr<ofxFBXBone> bone = fbx.getBone("head");
+    shared_ptr<ofxFBXBone> bone = fbx.getBone("CC_Base_Spine02");
     if( bone ) {
         bone->pointTo( light.getPosition(), ofVec3f(-1,0,0) ) ;
     }
+    fbx.setNodesNeedUpdate(true);
     
     // manipulates the mesh around the positioned bones //
     fbx.lateUpdate();
