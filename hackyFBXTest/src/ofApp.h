@@ -23,7 +23,8 @@ public:
 	void gotMessage(ofMessage msg);
 
 private:
-	ofxHackyFBX fbx;
+	shared_ptr<ofxHackyFBX> fbx;
+	//ofxHackyFBXOld fbx;
 	ofEasyCam cam;
 	ofLight light;
 };

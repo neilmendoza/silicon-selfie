@@ -3,7 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    fbx.loadFBX("humanoid.fbx");
+    fbx = make_shared<ofxHackyFBX>("party-f-0001/party-f-0001.fbx", ofGetWidth(), ofGetHeight(), true);
+    if (!fbx->LoadFile()) ofLogError("ofxHackyFBXOld") << "Failed to load";// << fullPath;
 
     light.setPosition(100.f, 100.f, 100.f);
     light.enable();
@@ -20,7 +21,7 @@ void ofApp::update()
 void ofApp::draw()
 {
     cam.begin();
-    fbx.draw();
+    fbx->draw();
     cam.end();
 }
 
