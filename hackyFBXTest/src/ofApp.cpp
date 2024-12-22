@@ -3,6 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+    ofDisableArbTex();
+
     fbx = make_shared<ofxHackyFBX>("party-f-0001/party-f-0001.fbx", ofGetWidth(), ofGetHeight(), true);
     if (!fbx->LoadFile()) ofLogError("ofxHackyFBXOld") << "Failed to load";// << fullPath;
 

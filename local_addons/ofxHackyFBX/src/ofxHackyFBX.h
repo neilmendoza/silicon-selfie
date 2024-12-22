@@ -12,6 +12,7 @@ this software in either electronic or hard copy form.
 #pragma once
 
 #include "GlFunctions.h"
+#include "ofMain.h"
 
 class DrawText;
 
@@ -92,6 +93,11 @@ public:
     void            SetZoomMode( CameraZoomMode pZoomMode);       
 
 private:
+    vector<shared_ptr<ofImage>> textures;
+    void LoadCacheRecursive(FbxScene * pScene, FbxAnimLayer * pAnimLayer, const char * pFbxFileName, bool pSupportVBO);
+    void LoadCacheRecursive(FbxNode * pNode, FbxAnimLayer * pAnimLayer, bool pSupportVBO);
+    bool LoadTextureFromFile(const FbxString & pFilePath, unsigned int & pTextureObject);
+
     // Display information about current status in the left-up corner of the window.
     void DisplayWindowMessage();
     // Display a X-Z grid.

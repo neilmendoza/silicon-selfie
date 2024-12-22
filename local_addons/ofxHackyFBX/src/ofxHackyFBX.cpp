@@ -158,103 +158,9 @@ namespace
         }
     }
 
-    // Load a texture file (TGA only now) into GPU and return the texture object name
-    bool LoadTextureFromFile(const FbxString & pFilePath, unsigned int & pTextureObject)
-    {
-        if (pFilePath.Right(3).Upper() == "TGA")
-        {
-            tga_image lTGAImage;
 
-            if (tga_read(&lTGAImage, pFilePath.Buffer()) == TGA_NOERR)
-            {
-                // Make sure the image is left to right
-                if (tga_is_right_to_left(&lTGAImage))
-                    tga_flip_horiz(&lTGAImage);
 
-                // Make sure the image is bottom to top
-                if (tga_is_top_to_bottom(&lTGAImage))
-                    tga_flip_vert(&lTGAImage);
 
-                // Make the image BGR 24
-                tga_convert_depth(&lTGAImage, 24);
-
-                // Transfer the texture date into GPU
-                glGenTextures(1, &pTextureObject);
-                glBindTexture(GL_TEXTURE_2D, pTextureObject);
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-                glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
-                glTexImage2D(GL_TEXTURE_2D, 0, 3, lTGAImage.width, lTGAImage.height, 0, GL_BGR,
-                    GL_UNSIGNED_BYTE, lTGAImage.image_data);
-                glBindTexture(GL_TEXTURE_2D, 0);
-
-                tga_free_buffers(&lTGAImage);
-
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    // Bake node attributes and materials under this node recursively.
-    // Currently only mesh, light and material.
-    void LoadCacheRecursive(FbxNode * pNode, FbxAnimLayer * pAnimLayer, bool pSupportVBO)
-    {
-        // Bake material and hook as user data.
-        const int lMaterialCount = pNode->GetMaterialCount();
-        for (int lMaterialIndex = 0; lMaterialIndex < lMaterialCount; ++lMaterialIndex)
-        {
-            FbxSurfaceMaterial * lMaterial = pNode->GetMaterial(lMaterialIndex);
-            if (lMaterial && !lMaterial->GetUserDataPtr())
-            {
-                FbxAutoPtr<MaterialCache> lMaterialCache(new MaterialCache);
-                if (lMaterialCache->Initialize(lMaterial))
-                {
-                    lMaterial->SetUserDataPtr(lMaterialCache.Release());
-                }
-            }
-        }
-
-        FbxNodeAttribute* lNodeAttribute = pNode->GetNodeAttribute();
-        if (lNodeAttribute)
-        {
-            // Bake mesh as VBO(vertex buffer object) into GPU.
-            if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eMesh)
-            {
-                FbxMesh * lMesh = pNode->GetMesh();
-                if (pSupportVBO && lMesh && !lMesh->GetUserDataPtr())
-                {
-                    FbxAutoPtr<VBOMesh> lMeshCache(new VBOMesh);
-                    if (lMeshCache->Initialize(lMesh))
-                    {
-                        lMesh->SetUserDataPtr(lMeshCache.Release());
-                    }
-                }
-            }
-            // Bake light properties.
-            else if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eLight)
-            {
-                FbxLight * lLight = pNode->GetLight();
-                if (lLight && !lLight->GetUserDataPtr())
-                {
-                    FbxAutoPtr<LightCache> lLightCache(new LightCache);
-                    if (lLightCache->Initialize(lLight, pAnimLayer))
-                    {
-                        lLight->SetUserDataPtr(lLightCache.Release());
-                    }
-                }
-            }
-        }
-
-        const int lChildCount = pNode->GetChildCount();
-        for (int lChildIndex = 0; lChildIndex < lChildCount; ++lChildIndex)
-        {
-            LoadCacheRecursive(pNode->GetChild(lChildIndex), pAnimLayer, pSupportVBO);
-        }
-    }
 
     // Unload the cache and release the memory under this node recursively.
     void UnloadCacheRecursive(FbxNode * pNode)
@@ -306,63 +212,7 @@ namespace
         }
     }
 
-    // Bake node attributes and materials for this scene and load the textures.
-    void LoadCacheRecursive(FbxScene * pScene, FbxAnimLayer * pAnimLayer, const char * pFbxFileName, bool pSupportVBO)
-    {
-        // Load the textures into GPU, only for file texture now
-        const int lTextureCount = pScene->GetTextureCount();
-        for (int lTextureIndex = 0; lTextureIndex < lTextureCount; ++lTextureIndex)
-        {
-            FbxTexture * lTexture = pScene->GetTexture(lTextureIndex);
-            FbxFileTexture * lFileTexture = FbxCast<FbxFileTexture>(lTexture);
-            if (lFileTexture && !lFileTexture->GetUserDataPtr())
-            {
-                // Try to load the texture from absolute path
-                const FbxString lFileName = lFileTexture->GetFileName();
 
-                // Only TGA textures are supported now.
-                if (lFileName.Right(3).Upper() != "TGA")
-                {
-                    FBXSDK_printf("Only TGA textures are supported now: %s\n", lFileName.Buffer());
-                    continue;
-                }
-
-                GLuint lTextureObject = 0;
-                bool lStatus = LoadTextureFromFile(lFileName, lTextureObject);
-
-                const FbxString lAbsFbxFileName = FbxPathUtils::Resolve(pFbxFileName);
-                const FbxString lAbsFolderName = FbxPathUtils::GetFolderName(lAbsFbxFileName);
-                if (!lStatus)
-                {
-                    // Load texture from relative file name (relative to FBX file)
-                    const FbxString lResolvedFileName = FbxPathUtils::Bind(lAbsFolderName, lFileTexture->GetRelativeFileName());
-                    lStatus = LoadTextureFromFile(lResolvedFileName, lTextureObject);
-                }
-
-                if (!lStatus)
-                {
-                    // Load texture from file name only (relative to FBX file)
-                    const FbxString lTextureFileName = FbxPathUtils::GetFileName(lFileName);
-                    const FbxString lResolvedFileName = FbxPathUtils::Bind(lAbsFolderName, lTextureFileName);
-                    lStatus = LoadTextureFromFile(lResolvedFileName, lTextureObject);
-                }
-
-                if (!lStatus)
-                {
-                    FBXSDK_printf("Failed to load texture file: %s\n", lFileName.Buffer());
-                    continue;
-                }
-
-                if (lStatus)
-                {
-                    GLuint * lTextureName = new GLuint(lTextureObject);
-                    lFileTexture->SetUserDataPtr(lTextureName);
-                }
-            }
-        }
-
-        LoadCacheRecursive(pScene->GetRootNode(), pAnimLayer, pSupportVBO);
-    }
 
     // Unload the cache and release the memory fro this scene and release the textures in GPU
     void UnloadCacheRecursive(FbxScene * pScene)
@@ -1064,4 +914,149 @@ void ofxHackyFBX::SetZoomMode( CameraZoomMode pZoomMode)
         mCameraZoomMode =  ZOOM_FOCAL_LENGTH;
     }
     
+}
+
+// Bake node attributes and materials for this scene and load the textures.
+void ofxHackyFBX::LoadCacheRecursive(FbxScene * pScene, FbxAnimLayer * pAnimLayer, const char * pFbxFileName, bool pSupportVBO)
+{
+    // Load the textures into GPU, only for file texture now
+    const int lTextureCount = pScene->GetTextureCount();
+    for (int lTextureIndex = 0; lTextureIndex < lTextureCount; ++lTextureIndex)
+    {
+        FbxTexture * lTexture = pScene->GetTexture(lTextureIndex);
+        FbxFileTexture * lFileTexture = FbxCast<FbxFileTexture>(lTexture);
+        if (lFileTexture && !lFileTexture->GetUserDataPtr())
+        {
+            // Try to load the texture from absolute path
+            //const FbxString lFileName = lFileTexture->GetFileName();
+
+            // mega hack, fix later
+            const FbxString lFileName = lFileTexture->GetRelativeFileName();
+            vector<string> split = ofSplitString(lFileName.Buffer(), "\\");
+            string filename = ofToDataPath(split.back(), true);
+
+            // Only TGA textures are supported now.
+            //if (lFileName.Right(3).Upper() != "TGA")
+            //{
+            //    FBXSDK_printf("Only TGA textures are supported now: %s\n", lFileName.Buffer());
+            //    continue;
+            //}
+
+            GLuint lTextureObject = 0;
+            bool lStatus = LoadTextureFromFile(FbxString(filename.c_str()), lTextureObject);
+
+            if (lStatus) cout << "Loaded texture: " << filename << " " << lTextureObject << endl;
+            //bool lStatus = LoadTextureFromFile(lFileName, lTextureObject);
+
+            const FbxString lAbsFbxFileName = FbxPathUtils::Resolve(pFbxFileName);
+            const FbxString lAbsFolderName = FbxPathUtils::GetFolderName(lAbsFbxFileName);
+            if (!lStatus)
+            {
+                // Load texture from relative file name (relative to FBX file)
+                const FbxString lResolvedFileName = FbxPathUtils::Bind(lAbsFolderName, lFileTexture->GetRelativeFileName());
+                lStatus = LoadTextureFromFile(lResolvedFileName, lTextureObject);
+            }
+
+            if (!lStatus)
+            {
+                // Load texture from file name only (relative to FBX file)
+                const FbxString lTextureFileName = FbxPathUtils::GetFileName(lFileName);
+                const FbxString lResolvedFileName = FbxPathUtils::Bind(lAbsFolderName, lTextureFileName);
+                lStatus = LoadTextureFromFile(lResolvedFileName, lTextureObject);
+            }
+
+            if (!lStatus)
+            {
+                FBXSDK_printf("Failed to load texture file: %s\n", lFileName.Buffer());
+                continue;
+            }
+
+            if (lStatus)
+            {
+                GLuint * lTextureName = new GLuint(lTextureObject);
+                lFileTexture->SetUserDataPtr(lTextureName);
+            }
+        }
+    }
+
+    LoadCacheRecursive(pScene->GetRootNode(), pAnimLayer, pSupportVBO);
+}
+
+// Bake node attributes and materials under this node recursively.
+// Currently only mesh, light and material.
+void ofxHackyFBX::LoadCacheRecursive(FbxNode * pNode, FbxAnimLayer * pAnimLayer, bool pSupportVBO)
+{
+    // Bake material and hook as user data.
+    const int lMaterialCount = pNode->GetMaterialCount();
+    for (int lMaterialIndex = 0; lMaterialIndex < lMaterialCount; ++lMaterialIndex)
+    {
+        FbxSurfaceMaterial * lMaterial = pNode->GetMaterial(lMaterialIndex);
+        if (lMaterial && !lMaterial->GetUserDataPtr())
+        {
+            FbxAutoPtr<MaterialCache> lMaterialCache(new MaterialCache);
+            if (lMaterialCache->Initialize(lMaterial))
+            {
+                lMaterial->SetUserDataPtr(lMaterialCache.Release());
+            }
+        }
+    }
+
+    FbxNodeAttribute* lNodeAttribute = pNode->GetNodeAttribute();
+    if (lNodeAttribute)
+    {
+        // Bake mesh as VBO(vertex buffer object) into GPU.
+        if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eMesh)
+        {
+            FbxMesh * lMesh = pNode->GetMesh();
+            if (pSupportVBO && lMesh && !lMesh->GetUserDataPtr())
+            {
+                FbxAutoPtr<VBOMesh> lMeshCache(new VBOMesh);
+                if (lMeshCache->Initialize(lMesh))
+                {
+                    lMesh->SetUserDataPtr(lMeshCache.Release());
+                }
+            }
+        }
+        // Bake light properties.
+        else if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eLight)
+        {
+            FbxLight * lLight = pNode->GetLight();
+            if (lLight && !lLight->GetUserDataPtr())
+            {
+                FbxAutoPtr<LightCache> lLightCache(new LightCache);
+                if (lLightCache->Initialize(lLight, pAnimLayer))
+                {
+                    lLight->SetUserDataPtr(lLightCache.Release());
+                }
+            }
+        }
+    }
+
+    const int lChildCount = pNode->GetChildCount();
+    for (int lChildIndex = 0; lChildIndex < lChildCount; ++lChildIndex)
+    {
+        LoadCacheRecursive(pNode->GetChild(lChildIndex), pAnimLayer, pSupportVBO);
+    }
+}
+
+    // Load a texture file (TGA only now) into GPU and return the texture object name
+bool ofxHackyFBX::LoadTextureFromFile(const FbxString & pFilePath, unsigned int & pTextureObject)
+{
+    auto image = make_shared<ofImage>();
+    if (image->load(pFilePath.Buffer()))
+    {
+        image->mirror(true, false);
+        image->bind();
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+        glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+        pTextureObject = image->getTextureReference().getTextureData().textureID;
+        image->unbind();
+        textures.push_back(image);
+        return true;
+    }
+    ofLogError("LoadTextureFromFile") << "Failed to load texture: " << pFilePath;
+    return false;
 }
