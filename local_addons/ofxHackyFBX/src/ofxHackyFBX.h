@@ -30,7 +30,9 @@ public:
     };
 
     void draw();
-
+    void logScene();
+    void setPoseIndex(int index) { mPoseIndex = index; }
+    void findBlendShapes();
 
     Status GetStatus() const { return mStatus; }
 
@@ -52,10 +54,6 @@ public:
     void OnReshape(int pWidth, int pHeight);
     // Call this method when keyboard input occurs.
     void OnKeyboard(unsigned char pKey);
-    // Call this method when mouse buttons are pushed or released.
-    void OnMouse(int pButton, int pState, int pX, int pY);
-    // Call this method when mouse is moved.
-    void OnMouseMotion(int pX, int pY);
     // Call this method when timer is finished, for animation display.
     void OnTimerClick() const;
 
@@ -93,6 +91,8 @@ public:
     void            SetZoomMode( CameraZoomMode pZoomMode);       
 
 private:
+    void findBlendShapesRecursive(FbxNode* pNode, vector<string>& shapes);
+
     vector<shared_ptr<ofImage>> textures;
     void LoadCacheRecursive(FbxScene * pScene, FbxAnimLayer * pAnimLayer, const char * pFbxFileName, bool pSupportVBO);
     void LoadCacheRecursive(FbxNode * pNode, FbxAnimLayer * pAnimLayer, bool pSupportVBO);

@@ -158,10 +158,6 @@ namespace
         }
     }
 
-
-
-
-
     // Unload the cache and release the memory under this node recursively.
     void UnloadCacheRecursive(FbxNode * pNode)
     {
@@ -211,8 +207,6 @@ namespace
             UnloadCacheRecursive(pNode->GetChild(lChildIndex));
         }
     }
-
-
 
     // Unload the cache and release the memory fro this scene and release the textures in GPU
     void UnloadCacheRecursive(FbxScene * pScene)
@@ -309,6 +303,58 @@ ofxHackyFBX::~ofxHackyFBX()
     // are automatically destroyed at the same time.
 	DestroySdkObjects(mSdkManager, true);
 }
+
+void ofxHackyFBX::findBlendShapes()
+{
+    vector<string> shapes;
+    findBlendShapesRecursive(mScene->GetRootNode(), shapes);
+}
+
+void ofxHackyFBX::findBlendShapesRecursive(FbxNode* node, vector<string>& shapes)
+{
+    if (node && node->GetNodeAttribute() && node->GetNodeAttribute()->GetAttributeType() == FbxNodeAttribute::eMesh)
+    {
+        FbxMesh* mesh = node->GetMesh();
+
+        int blendShapeCount = mesh->GetDeformerCount(FbxDeformer::eBlendShape);
+        if (blendShapeCount)
+        {
+            for (int deformerIndex = 0; deformerIndex < blendShapeCount; ++deformerIndex)
+            {
+                FbxBlendShape* blendShape = (FbxBlendShape*)mesh->GetDeformer(deformerIndex, FbxDeformer::eBlendShape);
+                for (int channelIndex = 0; channelIndex < blendShape->GetBlendShapeChannelCount(); ++channelIndex)
+                {
+                    FbxBlendShapeChannel* channel = blendShape->GetBlendShapeChannel(channelIndex);
+                    int targetShapeCount = channel->GetTargetShapeCount();
+                    for (int shapeIndex = 0; shapeIndex < targetShapeCount; ++shapeIndex)
+                    {
+                        FbxShape* shape = channel->GetTargetShape(shapeIndex);
+                        const char* shapeName = shape->GetName();
+                        cout << "  BlendShape: " << blendShape->GetName()
+                                      << ", Channel: " << channelIndex
+                                      << ", Shape: " << shapeName << endl;
+                    }
+                }
+            }
+        }
+        else cout << "Mesh: " << mesh->GetName() << " has no blendshapes" << endl;
+    }
+    for (int i = 0; i < node->GetChildCount(); i++)
+    {
+        findBlendShapesRecursive(node->GetChild(i), shapes);
+    }
+}
+
+
+void ofxHackyFBX::logScene()
+{
+    cout << "Pose count: " << mPoseArray.Size() << endl;
+    for (int i = 0; i < mPoseArray.Size(); ++i)
+    {
+        cout << mPoseArray[i]->GetName() << endl;
+    }
+}
+
 
 bool ofxHackyFBX::LoadFile()
 {
@@ -678,106 +724,6 @@ void ofxHackyFBX::OnKeyboard(unsigned char pKey)
     if (pKey == ' ')
     {
         SetPause(!GetPause());
-    }
-}
-
-void ofxHackyFBX::OnMouse(int pButton, int pState, int pX, int pY)
-{
-    // Move the camera (orbit, zoom or pan) with the mouse.
-    FbxCamera* lCamera = GetCurrentCamera(mScene);
-    if (lCamera)
-    {
-        mCamPosition = lCamera->Position.Get();
-        mCamCenter = lCamera->InterestPosition.Get();
-        mRoll = lCamera->Roll.Get();
-    }
-    mLastX = pX;
-    mLastY = pY;
-
-    switch (pButton)
-    {
-    case LEFT_BUTTON:
-        // ORBIT (or PAN)
-        switch (pState)
-        {
-        case BUTTON_DOWN:
-            if (mCameraStatus == CAMERA_ZOOM)
-            {
-                mCameraStatus = CAMERA_PAN;
-            }
-            else
-            {
-                mCameraStatus = CAMERA_ORBIT;
-            }
-            break;
-
-        default:
-            if (mCameraStatus == CAMERA_PAN)
-            {
-                mCameraStatus = CAMERA_ZOOM;
-            }
-            else
-            {
-                mCameraStatus = CAMERA_NOTHING;
-            }
-            break;
-        }
-        break;
-
-    case MIDDLE_BUTTON:
-        // ZOOM (or PAN)
-        switch (pState)
-        {
-        case BUTTON_DOWN:
-            if (mCameraStatus == CAMERA_ORBIT)
-            {
-                mCameraStatus = CAMERA_PAN;
-            }
-            else
-            {
-                mCameraStatus = CAMERA_ZOOM;
-            }
-            break;
-        
-        default:
-            if (mCameraStatus == CAMERA_PAN)
-            {
-                mCameraStatus = CAMERA_ORBIT;
-            }
-            else
-            {
-                mCameraStatus = CAMERA_NOTHING;
-            }
-            break;
-        }
-        break;
-    }
-}
-
-void ofxHackyFBX::OnMouseMotion(int pX, int pY)
-{
-    int motion;
-
-    switch (mCameraStatus)
-    {
-    default:
-        break;
-    case CAMERA_ORBIT:
-        CameraOrbit(mScene, mCamPosition, mRoll, pX-mLastX, mLastY-pY);
-        mStatus = MUST_BE_REFRESHED;
-        break;
-
-    case CAMERA_ZOOM:
-        motion = mLastY-pY;
-        CameraZoom(mScene, motion, mCameraZoomMode);
-        mLastY = pY;
-        mStatus = MUST_BE_REFRESHED;
-        break;
-
-    case CAMERA_PAN:
-        CameraPan(mScene, mCamPosition, mCamCenter, mRoll, pX-mLastX, mLastY-pY);
-        mStatus = MUST_BE_REFRESHED;
-        break;
     }
 }
 
