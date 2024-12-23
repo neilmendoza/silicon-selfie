@@ -24,7 +24,7 @@ void ofApp::update()
 {
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 2));
 
-    fbx->setBlendShapePercent("V_Lip_Open", 50.f + 50.f * sin(ofGetElapsedTimef()));
+    fbx->setBlendShapePercent("A14_Eye_Blink_Left", 50.f + 50.f * sin(ofGetElapsedTimef()));
 }
 
 //--------------------------------------------------------------
