@@ -1,0 +1,1065 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		"1242BD3E-707C-4A2F-940F-902A66B66617" /* Common.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "15927DEB-8698-45C9-8BB2-166CF8E9363D" /* Common.cxx */; };
+		"3A7D72BF-2297-47CC-87F5-478B83E8FAE4" /* AnimationUtility.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "DCA71718-F7F2-48B1-B334-4CE365D3C339" /* AnimationUtility.cxx */; };
+		"45157B3F-8ACE-46C3-871D-53080053C651" /* GetPosition.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "C03CC026-A87B-4040-8F6D-5E404523FB27" /* GetPosition.cxx */; };
+		"52BA91BB-8904-4132-92AD-39CD4DAB48F5" /* ofxHackyFBXOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "2848D54C-64A6-42AD-B295-019C4002F41F" /* ofxHackyFBXOld.cpp */; };
+		"7F628ABC-9F43-4EFC-B957-1C62FBC5A8E7" /* FBX_ASCII_TEXTURE in Sources */ = {isa = PBXBuildFile; fileRef = "DA28DEC8-3EEF-41AA-855A-6ACC200FD586" /* FBX_ASCII_TEXTURE */; };
+		"818AD3F7-6260-4A09-B3BC-8232A67FDC77" /* GlFunctions.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "56E6745F-EB1D-4FD6-9CFE-1B2725FBC862" /* GlFunctions.cxx */; };
+		"94CF1199-2D11-43A4-BE91-DDEF9BDFD191" /* ofxHackyFBX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "9C41530F-2CD3-4F69-9AEB-0947E07CB867" /* ofxHackyFBX.cpp */; };
+		"A2CB5BCC-5973-4E27-B7AD-2FA4AF5EAC2F" /* GeometryUtility.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "897989BA-F4E4-4F5A-BA2C-F6484D4EFF80" /* GeometryUtility.cxx */; };
+		"A6DDC264-9F0C-45B1-8A20-FEE79F45A8BE" /* SceneCache.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "8953EEEF-F59B-4210-A989-ED934989ACE6" /* SceneCache.cxx */; };
+		"ABB72918-EEDF-4B77-B255-68CA5305C52C" /* SceneContext.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "74F42AD1-B637-4A0E-B03D-B761AFC49B12" /* SceneContext.cxx */; };
+		"B4552CC4-4AA8-4633-8C4D-C73F713AB537" /* SetCamera.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "28687E5E-0996-4F67-AA30-DB94F10FA81C" /* SetCamera.cxx */; };
+		"C4D31493-0C45-4313-85F4-9DE0BEB538C6" /* DrawScene.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "129C9B20-8025-44C2-944F-8BE11FB54150" /* DrawScene.cxx */; };
+		"DAEAE34A-CFD1-47A1-8018-DC330B2F05E1" /* DrawText.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "39C8BBA5-4E2F-4F24-B957-A49C6B53B32A" /* DrawText.cxx */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		"F3C57821-F36D-41AF-BAF9-76EF578F4951" /* targa.cxx in Sources */ = {isa = PBXBuildFile; fileRef = "F0ADDA2F-A400-4AF5-9F38-509725D325A1" /* targa.cxx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4A5B60F29BAAAE400C2D356 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		"005F89AE-FB24-4F28-88D5-11E7212E4D9D" /* targa.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = targa.h; path = ../local_addons/ofxHackyFBX/src/targa.h; sourceTree = SOURCE_ROOT; };
+		"040E3CB5-A56B-4D53-B14B-67B8BB6961E1" /* fbxquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxquery.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxquery.h; sourceTree = SOURCE_ROOT; };
+		"04F21D52-480B-442E-BAAD-99F95247F279" /* fbxarray.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxarray.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxarray.h; sourceTree = SOURCE_ROOT; };
+		"05039FA3-935C-49A9-BE6C-E774C5563D01" /* fbxcharacternodename.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcharacternodename.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxcharacternodename.h; sourceTree = SOURCE_ROOT; };
+		"05BAEF61-674C-43D4-B99E-FF9B8F405EC3" /* fbxmultimap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmultimap.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxmultimap.h; sourceTree = SOURCE_ROOT; };
+		"0745EA14-66D4-451C-9B3D-F09E0696CD50" /* fbxutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxutils.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxutils.h; sourceTree = SOURCE_ROOT; };
+		"0973D442-757A-4A45-BECF-95364678E598" /* fbxgeometryconverter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgeometryconverter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxgeometryconverter.h; sourceTree = SOURCE_ROOT; };
+		"097FEDDE-BB3F-4CB8-A453-349ECAA937B4" /* fbxfolder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxfolder.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxfolder.h; sourceTree = SOURCE_ROOT; };
+		"0B7B5691-6E88-430B-AC69-C58B0B12F1C4" /* fbxredblacktree.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxredblacktree.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxredblacktree.h; sourceTree = SOURCE_ROOT; };
+		"0FDD3B3B-219F-4A11-9026-E38269583684" /* fbxsync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsync.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/sync/fbxsync.h; sourceTree = SOURCE_ROOT; };
+		"1193D22F-19A3-48BD-869C-2D637CE582E1" /* fbxobjectfilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxobjectfilter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxobjectfilter.h; sourceTree = SOURCE_ROOT; };
+		"122243BF-31E7-40EC-86A9-2AE561C0E43E" /* fbxlodgroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlodgroup.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxlodgroup.h; sourceTree = SOURCE_ROOT; };
+		"1233660E-F62C-44E0-928B-25BC18560CA2" /* fbxskin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxskin.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxskin.h; sourceTree = SOURCE_ROOT; };
+		"129C9B20-8025-44C2-944F-8BE11FB54150" /* DrawScene.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DrawScene.cxx; path = ../local_addons/ofxHackyFBX/src/DrawScene.cxx; sourceTree = SOURCE_ROOT; };
+		"12F87D31-51C1-43CE-A9A7-AAEE4E7872DD" /* fbxcallbacks.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcallbacks.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxcallbacks.h; sourceTree = SOURCE_ROOT; };
+		"12FFFECD-C581-4867-BCC4-4592D51A5086" /* fbxcollectionexclusive.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcollectionexclusive.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxcollectionexclusive.h; sourceTree = SOURCE_ROOT; };
+		"14DA5AAC-D3E4-4E05-81E7-9F859E42C895" /* fbxrootnodeutility.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrootnodeutility.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrootnodeutility.h; sourceTree = SOURCE_ROOT; };
+		"1558024B-D6F6-41D2-92B4-3FAB359E3E31" /* fbxmath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmath.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxmath.h; sourceTree = SOURCE_ROOT; };
+		"15927DEB-8698-45C9-8BB2-166CF8E9363D" /* Common.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Common.cxx; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/Common/Common.cxx; sourceTree = SOURCE_ROOT; };
+		"15F1B7B2-BB32-4AC8-88FC-4B721D021C09" /* fbxcolladatokens.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcolladatokens.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxcolladatokens.h; sourceTree = SOURCE_ROOT; };
+		"164AD267-6309-433B-82A7-DB794CE603E6" /* fbxdisplaylayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdisplaylayer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxdisplaylayer.h; sourceTree = SOURCE_ROOT; };
+		"169DD447-2F7B-4232-A1FE-FDA73246EFD0" /* fbxhashmap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxhashmap.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxhashmap.h; sourceTree = SOURCE_ROOT; };
+		"17D6D183-1A9E-430A-9D2B-29E85356CE4F" /* fbxrenamingstrategyutilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrenamingstrategyutilities.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrenamingstrategyutilities.h; sourceTree = SOURCE_ROOT; };
+		"18669A1B-909D-4EFE-BB1B-F94CDD6B3AC9" /* fbxscene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxscene.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxscene.h; sourceTree = SOURCE_ROOT; };
+		"18B522E8-D0E4-45CB-847D-75F215A72A3A" /* fbxmaterialconverter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmaterialconverter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxmaterialconverter.h; sourceTree = SOURCE_ROOT; };
+		"18DE1308-F174-492E-A3B9-BBFC0C97BDEC" /* fbxcamera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcamera.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxcamera.h; sourceTree = SOURCE_ROOT; };
+		"190861A8-E038-4FBB-81AE-7C78F2DA5B44" /* fbxdynamicarray.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdynamicarray.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxdynamicarray.h; sourceTree = SOURCE_ROOT; };
+		191CD6FA2847E21E0085CBB6 /* of.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = of.entitlements; sourceTree = "<group>"; };
+		191EF70929D778A400F35F26 /* openFrameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openFrameworks; path = /Users/neil/Projects/openFrameworks/libs/openFrameworks; sourceTree = SOURCE_ROOT; };
+		"192A4B82-7D66-4749-8DA4-02E07B3E9C35" /* fbxthumbnail.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxthumbnail.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxthumbnail.h; sourceTree = SOURCE_ROOT; };
+		"197EC1A5-C90E-440E-9EE7-CCD7FFE3F975" /* fbxdualquaternion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdualquaternion.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxdualquaternion.h; sourceTree = SOURCE_ROOT; };
+		"1A5D20C7-6719-4FA8-A06F-F08F46AC5D12" /* fbxtrimnurbssurface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtrimnurbssurface.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxtrimnurbssurface.h; sourceTree = SOURCE_ROOT; };
+		"1CE04963-EE66-47CF-A7CB-0B5A90F6BA18" /* fbxtypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtypes.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch/fbxtypes.h; sourceTree = SOURCE_ROOT; };
+		"1D819958-01A6-46B8-9615-01E6754FC37A" /* fbxiobase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxiobase.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxiobase.h; sourceTree = SOURCE_ROOT; };
+		"1F8D4FB9-3E7F-4B58-990E-201A113F70CF" /* fbxanimcurvefilters.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimcurvefilters.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimcurvefilters.h; sourceTree = SOURCE_ROOT; };
+		"2034E808-DF11-4D4A-A9A3-EC481F0308A6" /* fbxmediaclip.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmediaclip.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxmediaclip.h; sourceTree = SOURCE_ROOT; };
+		"20957C89-1C6D-4EC0-8BA5-38BBA72A976D" /* fbxstream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstream.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxstream.h; sourceTree = SOURCE_ROOT; };
+		"210B442B-3D39-400C-ACBF-5EB2C683A2EC" /* fbxsurfacelambert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsurfacelambert.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxsurfacelambert.h; sourceTree = SOURCE_ROOT; };
+		"22C44E92-2563-42BF-991E-426852882F6D" /* fbxsdk_nsbegin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsdk_nsbegin.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fbxsdk_nsbegin.h; sourceTree = SOURCE_ROOT; };
+		"22CBB18B-1186-4308-8DE5-01AC4B1D7075" /* fbxanimevaluator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimevaluator.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimevaluator.h; sourceTree = SOURCE_ROOT; };
+		"22D3D047-CC31-4B10-B19E-0AA36A33AFA8" /* fbxreaderfbx7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxreaderfbx7.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxreaderfbx7.h; sourceTree = SOURCE_ROOT; };
+		"23A2C06A-2B84-417C-8361-C9E113590947" /* fbxcollection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcollection.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxcollection.h; sourceTree = SOURCE_ROOT; };
+		"25800FEC-E08B-4AB4-802E-CE31932BE087" /* fbxaudiolayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxaudiolayer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxaudiolayer.h; sourceTree = SOURCE_ROOT; };
+		"276A0047-CFDA-4914-98D1-0E42D84CC3C6" /* fbxnew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnew.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch/fbxnew.h; sourceTree = SOURCE_ROOT; };
+		"2848D54C-64A6-42AD-B295-019C4002F41F" /* ofxHackyFBXOld.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxHackyFBXOld.cpp; path = ../local_addons/ofxHackyFBX/src/ofxHackyFBXOld.cpp; sourceTree = SOURCE_ROOT; };
+		"28687E5E-0996-4F67-AA30-DB94F10FA81C" /* SetCamera.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SetCamera.cxx; path = ../local_addons/ofxHackyFBX/src/SetCamera.cxx; sourceTree = SOURCE_ROOT; };
+		"29BE5956-E7CE-41C7-94E9-10016A4D1158" /* GetPosition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GetPosition.h; path = ../local_addons/ofxHackyFBX/src/GetPosition.h; sourceTree = SOURCE_ROOT; };
+		"2C434BA4-B681-453C-BBB4-0700822257C1" /* fbxopticalreference.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxopticalreference.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxopticalreference.h; sourceTree = SOURCE_ROOT; };
+		"2D7BB265-2A8A-4EC0-A1AB-1D73DEB9FE88" /* fbxbindingsentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbindingsentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxbindingsentryview.h; sourceTree = SOURCE_ROOT; };
+		"2E661B7A-8204-4A5B-BD4C-66E83FE1AE74" /* fbxaxissystem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxaxissystem.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxaxissystem.h; sourceTree = SOURCE_ROOT; };
+		"2F5C40DD-D2E6-4B69-8A29-C0273E1C96D5" /* fbxskeleton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxskeleton.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxskeleton.h; sourceTree = SOURCE_ROOT; };
+		"2F988A96-401F-49B5-8F99-9779DDE95F96" /* fbxprocessorxrefuserlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxprocessorxrefuserlib.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxprocessorxrefuserlib.h; sourceTree = SOURCE_ROOT; };
+		"310FC095-DDA0-4D2C-80F3-A1C97D826ED2" /* fbxlibrary.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlibrary.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxlibrary.h; sourceTree = SOURCE_ROOT; };
+		"313A2526-2E45-4224-96C9-08675E96630E" /* fbxpatch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpatch.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxpatch.h; sourceTree = SOURCE_ROOT; };
+		"3248475C-9563-475F-BE66-57E9915812A2" /* fbxplugincontainer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxplugincontainer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxplugincontainer.h; sourceTree = SOURCE_ROOT; };
+		"32B32259-3283-4284-9327-DBB6E713CB0B" /* fbxpose.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpose.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxpose.h; sourceTree = SOURCE_ROOT; };
+		"33CA2F4A-9431-488A-A1A9-DF5226527F60" /* fbxwritercollada14.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxwritercollada14.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxwritercollada14.h; sourceTree = SOURCE_ROOT; };
+		"3639021A-4C8E-4369-9B11-E12C3CD3CC74" /* fbxgeometry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgeometry.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxgeometry.h; sourceTree = SOURCE_ROOT; };
+		"36F1C5F1-DB3E-45F0-A4DA-D63E89C1391D" /* fbxcontrolset.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcontrolset.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxcontrolset.h; sourceTree = SOURCE_ROOT; };
+		"3781086C-4EE9-4B86-B27D-B8E412658D71" /* fbxgobo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgobo.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxgobo.h; sourceTree = SOURCE_ROOT; };
+		"38F51379-3FB7-4775-B49F-DFC4923B0F6A" /* fbxsdk_version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsdk_version.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fbxsdk_version.h; sourceTree = SOURCE_ROOT; };
+		"38FA753F-23C4-488D-951F-ADD0E2D1E8F4" /* fbxpropertydef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpropertydef.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxpropertydef.h; sourceTree = SOURCE_ROOT; };
+		"39733484-71B4-4CCA-A451-9735398F7DBF" /* fbxcache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcache.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxcache.h; sourceTree = SOURCE_ROOT; };
+		"39C8BBA5-4E2F-4F24-B957-A49C6B53B32A" /* DrawText.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DrawText.cxx; path = ../local_addons/ofxHackyFBX/src/DrawText.cxx; sourceTree = SOURCE_ROOT; };
+		"3A208A8D-F11A-40EE-96C8-60AB5D48ADF8" /* fbxreaderfbx6.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxreaderfbx6.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxreaderfbx6.h; sourceTree = SOURCE_ROOT; };
+		"3A20CE9D-2E0E-4C1C-BED0-4478A0891002" /* fbxmemorypool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmemorypool.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxmemorypool.h; sourceTree = SOURCE_ROOT; };
+		"3BAC03F5-2606-4917-94D2-F32F2E3A6C87" /* fbxwriterfbx6.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxwriterfbx6.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxwriterfbx6.h; sourceTree = SOURCE_ROOT; };
+		"3C087595-21C7-422B-AA12-41057A3AE76D" /* DrawScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DrawScene.h; path = ../local_addons/ofxHackyFBX/src/DrawScene.h; sourceTree = SOURCE_ROOT; };
+		"3D1C4D7E-B6E1-4A41-AA99-8AB491EF207E" /* fbxlayeredtexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlayeredtexture.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxlayeredtexture.h; sourceTree = SOURCE_ROOT; };
+		"3DAAAE31-DA20-4860-AEB1-783E21AA62FF" /* fbxbindingoperator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbindingoperator.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxbindingoperator.h; sourceTree = SOURCE_ROOT; };
+		"3F4CA1AB-9EA6-44E3-ADD7-856918E614ED" /* SceneCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SceneCache.h; path = ../local_addons/ofxHackyFBX/src/SceneCache.h; sourceTree = SOURCE_ROOT; };
+		"3F83C59B-3EE3-4101-BA7F-E380403E7BE4" /* fbxtakeinfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtakeinfo.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxtakeinfo.h; sourceTree = SOURCE_ROOT; };
+		"42CCC583-6979-4EDD-937D-27D40D7A3885" /* GlFunctions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GlFunctions.h; path = ../local_addons/ofxHackyFBX/src/GlFunctions.h; sourceTree = SOURCE_ROOT; };
+		"4315A315-C92F-404C-B6F2-3F0DB2877E1A" /* fbxreadercollada14.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxreadercollada14.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxreadercollada14.h; sourceTree = SOURCE_ROOT; };
+		"4334318B-C071-4E63-94CC-4BE69C55ADAD" /* fbxpropertypage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpropertypage.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxpropertypage.h; sourceTree = SOURCE_ROOT; };
+		"441FE37C-4B25-40A9-A27B-FCA72266410B" /* fbxclock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxclock.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/sync/fbxclock.h; sourceTree = SOURCE_ROOT; };
+		"46E67248-04D2-4D0C-BDAF-280A0F6FA2CF" /* fbxglobalsettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxglobalsettings.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxglobalsettings.h; sourceTree = SOURCE_ROOT; };
+		"478CEC31-688D-480D-B649-CCED9C82F57D" /* fbxrenamingstrategy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrenamingstrategy.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrenamingstrategy.h; sourceTree = SOURCE_ROOT; };
+		"48A75689-EE3C-4159-918B-64BE4E051DB9" /* fbxline.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxline.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxline.h; sourceTree = SOURCE_ROOT; };
+		"48C62CD3-87CC-42C9-BE5D-58F275452023" /* fbxmanager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmanager.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxmanager.h; sourceTree = SOURCE_ROOT; };
+		"49DBA9E2-D92D-4E3C-A246-275B7E82CFC4" /* fbximporter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbximporter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbximporter.h; sourceTree = SOURCE_ROOT; };
+		"4AD4DFAD-74EA-4488-84C5-8E06EC00E5F0" /* fbxcontainerallocators.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcontainerallocators.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxcontainerallocators.h; sourceTree = SOURCE_ROOT; };
+		"4B98F3DB-D12F-4E2B-8E81-B2DF633DDD90" /* fbxcharptrset.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcharptrset.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxcharptrset.h; sourceTree = SOURCE_ROOT; };
+		"4C1C6E0F-21E5-4F37-AA3C-1778C6D7B941" /* fbxrenamingstrategyfbx6.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrenamingstrategyfbx6.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrenamingstrategyfbx6.h; sourceTree = SOURCE_ROOT; };
+		"4FDA4770-FBAD-4009-AD52-BA7D6E16F2F4" /* fbxtexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtexture.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxtexture.h; sourceTree = SOURCE_ROOT; };
+		"503FFC50-13B6-428B-85C7-0EAFF40FE4FB" /* fbxproperty.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxproperty.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxproperty.h; sourceTree = SOURCE_ROOT; };
+		"51A9192C-93C1-4156-8CB5-15175F942C91" /* fbxanimstack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimstack.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimstack.h; sourceTree = SOURCE_ROOT; };
+		"51BD2307-1F41-4A55-8470-C433074511E7" /* fbxoperatorentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxoperatorentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxoperatorentryview.h; sourceTree = SOURCE_ROOT; };
+		"524350F8-4092-4C2B-B735-487D6191ACBB" /* fbxcolladanamespace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcolladanamespace.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxcolladanamespace.h; sourceTree = SOURCE_ROOT; };
+		"532D7D4A-F417-4C45-AA4F-7A0FA08B7BF9" /* fbxstatisticsfbx.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstatisticsfbx.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxstatisticsfbx.h; sourceTree = SOURCE_ROOT; };
+		"56409FF1-D50E-4F27-8FE8-6B8357E25EB6" /* fbxqueryevent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxqueryevent.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxqueryevent.h; sourceTree = SOURCE_ROOT; };
+		"56E6745F-EB1D-4FD6-9CFE-1B2725FBC862" /* GlFunctions.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GlFunctions.cxx; path = ../local_addons/ofxHackyFBX/src/GlFunctions.cxx; sourceTree = SOURCE_ROOT; };
+		"5860FA56-644D-4A37-B2DC-CACD43412A66" /* fbxcameraswitcher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcameraswitcher.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxcameraswitcher.h; sourceTree = SOURCE_ROOT; };
+		"586C97A8-8561-402D-91EB-C8B9D4579725" /* fbxtransforms.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtransforms.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxtransforms.h; sourceTree = SOURCE_ROOT; };
+		"58E22C62-0AA7-48FF-9C96-F2A206391244" /* fbxentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxentryview.h; sourceTree = SOURCE_ROOT; };
+		"5B15755C-BF4A-4B40-8A1D-F6B25E3B55FA" /* fbxsubdiv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsubdiv.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxsubdiv.h; sourceTree = SOURCE_ROOT; };
+		"5B6F4AFD-CC0C-4C22-9C7B-F46BBA42E80A" /* fbxblendshapechannel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxblendshapechannel.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxblendshapechannel.h; sourceTree = SOURCE_ROOT; };
+		"5BAFF1CB-8A7E-4D65-B83E-4E5088A5611F" /* fbxvertexcachedeformer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxvertexcachedeformer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxvertexcachedeformer.h; sourceTree = SOURCE_ROOT; };
+		"5C12667B-84E8-45E4-8EB5-C91397307C62" /* fbxpair.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpair.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxpair.h; sourceTree = SOURCE_ROOT; };
+		"5CF506BB-6586-466C-B2BA-76C1921674D6" /* fbxiosettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxiosettings.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxiosettings.h; sourceTree = SOURCE_ROOT; };
+		"5D0C7A76-D277-4106-8F04-4751B5D3CF0C" /* fbxbindingtablebase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbindingtablebase.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxbindingtablebase.h; sourceTree = SOURCE_ROOT; };
+		"5F2865C3-1222-4CBB-8CB4-5B66AAFA891F" /* fbxrenamingstrategyfbx5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrenamingstrategyfbx5.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrenamingstrategyfbx5.h; sourceTree = SOURCE_ROOT; };
+		"606BA6D0-229C-4EF8-82A0-742605EF8F6A" /* SceneContext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SceneContext.h; path = ../local_addons/ofxHackyFBX/src/SceneContext.h; sourceTree = SOURCE_ROOT; };
+		"60A109C1-4362-4633-BA84-1448E2F6CBF3" /* fbxmodule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmodule.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxmodule.h; sourceTree = SOURCE_ROOT; };
+		"617549A4-5801-4023-9166-F47058321121" /* fbxsdk.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsdk.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk.h; sourceTree = SOURCE_ROOT; };
+		"62D9FC56-9D25-4F17-AC95-A6ADAC953E6B" /* fbxexporter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxexporter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxexporter.h; sourceTree = SOURCE_ROOT; };
+		"63CDCD70-CE01-4BE4-8270-C29AD5F5806F" /* fbxaudio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxaudio.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxaudio.h; sourceTree = SOURCE_ROOT; };
+		"644E1027-D909-4B1D-8DC5-412957238480" /* fbxalloc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxalloc.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch/fbxalloc.h; sourceTree = SOURCE_ROOT; };
+		"64DDDBD0-CEBD-4427-A06A-DC10D1ADF54F" /* fbxanimevalstate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimevalstate.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimevalstate.h; sourceTree = SOURCE_ROOT; };
+		"65AC8D07-0DEC-48BA-8C5E-0E080A88E9B3" /* fbxlimitsutilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlimitsutilities.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxlimitsutilities.h; sourceTree = SOURCE_ROOT; };
+		"66721903-1D31-46E7-8E86-3BE40BF0FD91" /* fbxsubdeformer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsubdeformer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxsubdeformer.h; sourceTree = SOURCE_ROOT; };
+		"66ABA7B0-17A6-4007-B77A-396EB9EB12D2" /* fbxhik2fbxcharacter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxhik2fbxcharacter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxhik2fbxcharacter.h; sourceTree = SOURCE_ROOT; };
+		"676C9E7F-715F-4C5F-A0B6-BCAD57848831" /* fbxconstantentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstantentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxconstantentryview.h; sourceTree = SOURCE_ROOT; };
+		"684BF990-04E6-4ED1-ABCB-003CA8EE983D" /* fbxio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxio.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxio.h; sourceTree = SOURCE_ROOT; };
+		"6B51F7F1-113B-4D0F-9134-1965BB677B87" /* fbxset.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxset.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxset.h; sourceTree = SOURCE_ROOT; };
+		"6B5ADF1C-0074-4F29-93F4-7F4DF10E7086" /* fbxnode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnode.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxnode.h; sourceTree = SOURCE_ROOT; };
+		"6CFE82DE-DCBE-4E91-8AC9-AAD9F1B7FAA8" /* fbxsdk_def.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsdk_def.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fbxsdk_def.h; sourceTree = SOURCE_ROOT; };
+		"6D5438F8-C10E-4031-8A4C-C0D63058D1BE" /* fbxconstraintcustom.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintcustom.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintcustom.h; sourceTree = SOURCE_ROOT; };
+		"6E1CA0B1-261F-4422-8C27-798408EEE6CB" /* fbxsemanticentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsemanticentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxsemanticentryview.h; sourceTree = SOURCE_ROOT; };
+		"6E7259D9-20A5-4C6F-B588-93A89ED6A191" /* fbxaffinematrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxaffinematrix.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxaffinematrix.h; sourceTree = SOURCE_ROOT; };
+		"713EE1E2-FF35-4E8C-B071-A633C65207E3" /* fbxreader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxreader.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxreader.h; sourceTree = SOURCE_ROOT; };
+		"72C8F135-4AA3-4E76-ACAF-4DDA6A29859E" /* fbxloadingstrategy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxloadingstrategy.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxloadingstrategy.h; sourceTree = SOURCE_ROOT; };
+		"74D3755F-BE4C-4D9C-BF0C-73329359BA72" /* fbxintrusivelist.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxintrusivelist.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxintrusivelist.h; sourceTree = SOURCE_ROOT; };
+		"74F42AD1-B637-4A0E-B03D-B761AFC49B12" /* SceneContext.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SceneContext.cxx; path = ../local_addons/ofxHackyFBX/src/SceneContext.cxx; sourceTree = SOURCE_ROOT; };
+		"774B80C0-E491-43AC-8FFF-4C6FF5A183AC" /* fbxlayercontainer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlayercontainer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxlayercontainer.h; sourceTree = SOURCE_ROOT; };
+		"79595413-BD0B-4418-8E2B-25040691D2BB" /* fbxclassid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxclassid.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxclassid.h; sourceTree = SOURCE_ROOT; };
+		"7AE58964-7542-4788-A4D2-D5683526BFA0" /* fbxvideo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxvideo.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxvideo.h; sourceTree = SOURCE_ROOT; };
+		"7B1E3804-E8C8-4BEB-A5A2-11EE03890450" /* fbxdebug.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdebug.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch/fbxdebug.h; sourceTree = SOURCE_ROOT; };
+		"7B4374E7-2711-466D-AB99-FC9C085B8C03" /* fbxwriterfbx5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxwriterfbx5.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxwriterfbx5.h; sourceTree = SOURCE_ROOT; };
+		"7CD20A4E-CA71-4063-8FD3-475484A6D932" /* fbxtimecode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtimecode.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxtimecode.h; sourceTree = SOURCE_ROOT; };
+		"80968CD9-D797-4F2F-BE01-C3C86341E3D7" /* fbxbindingtableentry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbindingtableentry.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxbindingtableentry.h; sourceTree = SOURCE_ROOT; };
+		"83555EA7-E6BB-4567-BB6B-501507B78DE0" /* fbxmarker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmarker.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxmarker.h; sourceTree = SOURCE_ROOT; };
+		"840FF45A-59EC-426A-B5FC-87EA1CD6E020" /* fbxnurbs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnurbs.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxnurbs.h; sourceTree = SOURCE_ROOT; };
+		"856F48E7-C9F4-41DA-AFFE-AB0E09D2798C" /* fbximplementation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbximplementation.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbximplementation.h; sourceTree = SOURCE_ROOT; };
+		"8930582E-5187-437F-BBCF-4CCEE52D4DFF" /* fbxanimevalclassic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimevalclassic.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimevalclassic.h; sourceTree = SOURCE_ROOT; };
+		"8953EEEF-F59B-4210-A989-ED934989ACE6" /* SceneCache.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SceneCache.cxx; path = ../local_addons/ofxHackyFBX/src/SceneCache.cxx; sourceTree = SOURCE_ROOT; };
+		"897989BA-F4E4-4F5A-BA2C-F6484D4EFF80" /* GeometryUtility.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GeometryUtility.cxx; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/Common/GeometryUtility.cxx; sourceTree = SOURCE_ROOT; };
+		"89C6A6A0-D8E8-4569-8088-E3A85F69121C" /* fbxsurfacephong.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsurfacephong.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxsurfacephong.h; sourceTree = SOURCE_ROOT; };
+		"8A42A5AC-F33F-4F0D-891B-1DF4495323E9" /* Common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Common.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/Common/Common.h; sourceTree = SOURCE_ROOT; };
+		"8B208351-67C5-4B44-9CCE-515E86CA61F9" /* fbxpropertyentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpropertyentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxpropertyentryview.h; sourceTree = SOURCE_ROOT; };
+		"8BF9C3F0-5D94-44B5-AA52-68C1C908B5B0" /* fbximplementationutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbximplementationutils.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbximplementationutils.h; sourceTree = SOURCE_ROOT; };
+		"8C72D50E-4C04-483F-B0C3-13A9252747C9" /* fbxconstraintscale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintscale.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintscale.h; sourceTree = SOURCE_ROOT; };
+		"8D828F82-0A21-4CCD-8336-56CE37BF6838" /* fbxconnectionpoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconnectionpoint.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxconnectionpoint.h; sourceTree = SOURCE_ROOT; };
+		"8E3CE60A-FD4A-4F49-8C1D-EB2284A25439" /* fbxshape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxshape.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxshape.h; sourceTree = SOURCE_ROOT; };
+		"8FAF2A6A-097E-4B34-ADDF-C857D9461A9F" /* fbxmesh.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmesh.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxmesh.h; sourceTree = SOURCE_ROOT; };
+		"8FB744A9-1F91-4211-B8D7-6BD5F7C1FD89" /* fbxprocessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxprocessor.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxprocessor.h; sourceTree = SOURCE_ROOT; };
+		"907D16B5-6496-460E-8E22-E6756935EC6A" /* fbxobjectscontainer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxobjectscontainer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxobjectscontainer.h; sourceTree = SOURCE_ROOT; };
+		"90AD049F-0B0C-4B33-B814-D9637108930C" /* fbxmatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmatrix.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxmatrix.h; sourceTree = SOURCE_ROOT; };
+		"92228EEB-BFF1-4C52-859D-91670BE2C270" /* fbxfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxfile.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxfile.h; sourceTree = SOURCE_ROOT; };
+		"93EB3119-1AFE-4E2C-BAA6-653B6B3E4C23" /* fbxemitter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxemitter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxemitter.h; sourceTree = SOURCE_ROOT; };
+		"941E9EF0-9D54-48DB-979B-890D1FD68E2D" /* fbxsymbol.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsymbol.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxsymbol.h; sourceTree = SOURCE_ROOT; };
+		"94F7508C-8B94-4309-A817-116269475EEE" /* fbxobjectmetadata.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxobjectmetadata.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxobjectmetadata.h; sourceTree = SOURCE_ROOT; };
+		"969A887D-C359-4F4F-A637-21B5F2837264" /* fbxsurfacematerial.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsurfacematerial.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxsurfacematerial.h; sourceTree = SOURCE_ROOT; };
+		"96CEE7BC-25F8-4355-BA48-B9E9BA5185A7" /* fbxconstraintrotation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintrotation.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintrotation.h; sourceTree = SOURCE_ROOT; };
+		"98030918-AEB8-4EDD-A023-1CD97DCB26C6" /* fbxcharacter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcharacter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxcharacter.h; sourceTree = SOURCE_ROOT; };
+		"9BC7C1FC-1041-4ABC-9E36-C2F641F55B90" /* fbxdocumentinfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdocumentinfo.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxdocumentinfo.h; sourceTree = SOURCE_ROOT; };
+		"9BFA16DB-360D-4DD1-A96C-CD9D17FAE44A" /* fbxgeometrybase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgeometrybase.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxgeometrybase.h; sourceTree = SOURCE_ROOT; };
+		"9C06A28B-EEDA-4931-A529-BA1B8AA44576" /* fbxstdcompliant.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstdcompliant.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch/fbxstdcompliant.h; sourceTree = SOURCE_ROOT; };
+		"9C41530F-2CD3-4F69-9AEB-0947E07CB867" /* ofxHackyFBX.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxHackyFBX.cpp; path = ../local_addons/ofxHackyFBX/src/ofxHackyFBX.cpp; sourceTree = SOURCE_ROOT; };
+		"9CDB6F5F-E316-433B-B37C-92DC5D268A10" /* fbxenvironment.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxenvironment.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxenvironment.h; sourceTree = SOURCE_ROOT; };
+		"9D0275BF-4B2F-485A-96F9-D717F0F873B7" /* ofxHackyFBX.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxHackyFBX.h; path = ../local_addons/ofxHackyFBX/src/ofxHackyFBX.h; sourceTree = SOURCE_ROOT; };
+		"9D93FBFC-15C5-436F-9043-B3F051579EF4" /* fbxrenamingstrategybase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrenamingstrategybase.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrenamingstrategybase.h; sourceTree = SOURCE_ROOT; };
+		"9E4463A9-1B10-419C-A682-1ECBF98A5C3F" /* AnimationUtility.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AnimationUtility.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/Common/AnimationUtility.h; sourceTree = SOURCE_ROOT; };
+		"9F377325-7D93-4329-B431-D890C0D6C587" /* fbxobject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxobject.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxobject.h; sourceTree = SOURCE_ROOT; };
+		"A1E37A5B-A1AD-49F4-BFC7-241FFBAD5955" /* fbxcolladaanimationelement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcolladaanimationelement.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxcolladaanimationelement.h; sourceTree = SOURCE_ROOT; };
+		"A25A63A1-7260-4683-A330-80CA3AD76473" /* fbxconstraintaim.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintaim.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintaim.h; sourceTree = SOURCE_ROOT; };
+		"A290E47F-0808-4D51-AF4A-255C9C25C891" /* fbxnull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnull.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxnull.h; sourceTree = SOURCE_ROOT; };
+		"A2BFAD2E-CD35-426C-A8E7-85A91EF55CFB" /* fbxblendshape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxblendshape.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxblendshape.h; sourceTree = SOURCE_ROOT; };
+		"A2C2D5AA-0593-4A5C-BE2B-2B02B0E10047" /* fbxglobalcamerasettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxglobalcamerasettings.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxglobalcamerasettings.h; sourceTree = SOURCE_ROOT; };
+		"A35CDE6E-7653-44BD-8A26-8B246ECB8252" /* fbxcamerastereo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcamerastereo.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxcamerastereo.h; sourceTree = SOURCE_ROOT; };
+		"A46428E6-D607-4271-8692-1B9F2AD973CC" /* fbxgeometryweightedmap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgeometryweightedmap.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxgeometryweightedmap.h; sourceTree = SOURCE_ROOT; };
+		"A55A0A15-941F-4D49-9CE6-04EC8EB3609B" /* fbxclonemanager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxclonemanager.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxclonemanager.h; sourceTree = SOURCE_ROOT; };
+		"A5DA1620-1E50-42F0-9DF1-53B39719ACAB" /* fbxsystemunit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsystemunit.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxsystemunit.h; sourceTree = SOURCE_ROOT; };
+		"A6DD1483-1292-48E5-8EB7-E6E236CEE5EE" /* fbxarch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxarch.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch/fbxarch.h; sourceTree = SOURCE_ROOT; };
+		"A703663A-61A1-4724-8BCC-8AC97DBF53A6" /* fbxweightedmapping.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxweightedmapping.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxweightedmapping.h; sourceTree = SOURCE_ROOT; };
+		"A75D2A93-06B8-4C39-96CE-60EE23E4888B" /* fbxdocument.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdocument.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxdocument.h; sourceTree = SOURCE_ROOT; };
+		"A8BBB38F-EB9B-4E61-A7BB-B19ACC9F07C9" /* fbxexternaldocreflistener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxexternaldocreflistener.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxexternaldocreflistener.h; sourceTree = SOURCE_ROOT; };
+		"A98E1CBC-4374-4C2B-9EA7-77189E142FDD" /* fbxplugin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxplugin.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxplugin.h; sourceTree = SOURCE_ROOT; };
+		"AA143449-ABC5-4082-A896-CE60EFF20532" /* fbxlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlayer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxlayer.h; sourceTree = SOURCE_ROOT; };
+		"AAA199D1-B005-475B-B7CA-F8C4FE29C80B" /* fbxthread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxthread.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/sync/fbxthread.h; sourceTree = SOURCE_ROOT; };
+		"AC4FF3F3-E322-4C31-97E4-65A4FD45B873" /* fbxiopluginregistry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxiopluginregistry.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxiopluginregistry.h; sourceTree = SOURCE_ROOT; };
+		"ADEB72F2-C57B-48F0-BE81-86DB05EEA93B" /* fbxstringlist.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstringlist.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxstringlist.h; sourceTree = SOURCE_ROOT; };
+		"AF72E4A4-FB21-4B7D-99CC-982328BED097" /* fbxscenecheckutility.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxscenecheckutility.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxscenecheckutility.h; sourceTree = SOURCE_ROOT; };
+		"B37EAC32-96D6-43FF-8212-4257859E2846" /* fbxlight.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlight.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxlight.h; sourceTree = SOURCE_ROOT; };
+		"B4E9C92A-5CFB-44C1-BEC0-8BC3AB707398" /* fbxpropertyhandle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpropertyhandle.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxpropertyhandle.h; sourceTree = SOURCE_ROOT; };
+		"B56D82CD-A0E4-4B53-9D0A-E7B4F0867FBA" /* fbxcharacterpose.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcharacterpose.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxcharacterpose.h; sourceTree = SOURCE_ROOT; };
+		"B6B6166C-4AB0-4575-B68C-4EE89F5DE140" /* fbxcontainertemplate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcontainertemplate.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxcontainertemplate.h; sourceTree = SOURCE_ROOT; };
+		"B7EE1AD5-15C4-4211-86F7-8CFABF216E1A" /* fbxdeformationsevaluator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdeformationsevaluator.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxdeformationsevaluator.h; sourceTree = SOURCE_ROOT; };
+		"B8C3D919-A9AA-4742-85E1-3286123333C0" /* fbxsdk_nsend.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsdk_nsend.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fbxsdk_nsend.h; sourceTree = SOURCE_ROOT; };
+		"BA06BE2F-3886-4F80-B8CA-C44097DFC1B7" /* fbxgloballightsettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgloballightsettings.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxgloballightsettings.h; sourceTree = SOURCE_ROOT; };
+		"BAFC4DD1-9FC9-43A7-813D-367BA40E5399" /* fbxshadingconventions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxshadingconventions.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxshadingconventions.h; sourceTree = SOURCE_ROOT; };
+		"BBEBC2E4-D3E3-42E0-952E-436C999750A7" /* fbxfiletexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxfiletexture.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxfiletexture.h; sourceTree = SOURCE_ROOT; };
+		"BCE1B739-A937-4CA7-B10A-756500E3C987" /* fbxbindingtable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbindingtable.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxbindingtable.h; sourceTree = SOURCE_ROOT; };
+		"BD5E8F96-D1C1-4AF4-A420-394E0100355F" /* fbxproceduraltexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxproceduraltexture.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxproceduraltexture.h; sourceTree = SOURCE_ROOT; };
+		"BE587F53-BB22-4A21-ABB5-DA37E97E70ED" /* fbxcolladautils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcolladautils.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxcolladautils.h; sourceTree = SOURCE_ROOT; };
+		"BF1ED355-3501-449E-88F6-EE8A3C6E6068" /* fbxquaternion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxquaternion.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxquaternion.h; sourceTree = SOURCE_ROOT; };
+		"BF801BED-B5F8-4CE4-B471-5B4B3F4A7D1C" /* fbxprogress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxprogress.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxprogress.h; sourceTree = SOURCE_ROOT; };
+		"BFE3F475-6184-4FA8-A74F-D38BD674A618" /* fbxdatatypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdatatypes.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxdatatypes.h; sourceTree = SOURCE_ROOT; };
+		"C03CC026-A87B-4040-8F6D-5E404523FB27" /* GetPosition.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GetPosition.cxx; path = ../local_addons/ofxHackyFBX/src/GetPosition.cxx; sourceTree = SOURCE_ROOT; };
+		"C04FE0E8-8F1C-4884-91AB-C1C74B8A17F8" /* fbxgroupname.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgroupname.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxgroupname.h; sourceTree = SOURCE_ROOT; };
+		"C214B07C-2A56-4ECD-A221-9434FF0317C8" /* fbxcolladaelement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcolladaelement.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxcolladaelement.h; sourceTree = SOURCE_ROOT; };
+		"C2C204C9-F11C-4F89-BBDA-7FD494CE2775" /* DrawText.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DrawText.h; path = ../local_addons/ofxHackyFBX/src/DrawText.h; sourceTree = SOURCE_ROOT; };
+		"C50D6621-EE2A-4A9F-9959-6D4E855D08D3" /* fbxsurfacematerialutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxsurfacematerialutils.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxsurfacematerialutils.h; sourceTree = SOURCE_ROOT; };
+		"C59F4375-A706-486E-8A65-23DA6C2CA65B" /* fbxconstraintutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintutils.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintutils.h; sourceTree = SOURCE_ROOT; };
+		"C6207D1F-F355-4C6F-943E-1BD96D1BE51E" /* fbxbase64coder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbase64coder.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxbase64coder.h; sourceTree = SOURCE_ROOT; };
+		"C8AE86C1-0FC3-4E33-8487-95B866DE5A00" /* fbxselectionset.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxselectionset.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxselectionset.h; sourceTree = SOURCE_ROOT; };
+		"C96F3967-4A58-4F64-884B-22AC5C08E4DB" /* fbxanimcurvenode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimcurvenode.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimcurvenode.h; sourceTree = SOURCE_ROOT; };
+		"CA85C68C-A40E-4915-863C-C77D706114D1" /* fbxreference.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxreference.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxreference.h; sourceTree = SOURCE_ROOT; };
+		"CB817E60-AC4C-40B6-AA41-31D5F82C06C3" /* fbxxref.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxxref.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxxref.h; sourceTree = SOURCE_ROOT; };
+		"CBD2ED24-C24B-48CC-BE32-48B62F6C6728" /* fbxprocessorshaderdependency.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxprocessorshaderdependency.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxprocessorshaderdependency.h; sourceTree = SOURCE_ROOT; };
+		"CC2A1BD0-AB89-4980-ACAE-D4C4F113F1DA" /* fbxscopedloadingfilename.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxscopedloadingfilename.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxscopedloadingfilename.h; sourceTree = SOURCE_ROOT; };
+		"CCFD17D1-6C01-490B-9182-BE5FCC28FEED" /* fbxtime.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxtime.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxtime.h; sourceTree = SOURCE_ROOT; };
+		"CD28D2E4-62D2-4EF0-9790-54391534A8C5" /* fbxstatistics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstatistics.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxstatistics.h; sourceTree = SOURCE_ROOT; };
+		"CD85B8BE-4AB3-48FD-9A2D-C39CAA0319F2" /* fbxanimlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimlayer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimlayer.h; sourceTree = SOURCE_ROOT; };
+		"D0408AC2-2634-48E3-85E6-A88323D114EC" /* fbxatomic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxatomic.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/sync/fbxatomic.h; sourceTree = SOURCE_ROOT; };
+		"D1C44620-5AB3-49CC-A169-7199348C43CE" /* fbxnurbssurface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnurbssurface.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxnurbssurface.h; sourceTree = SOURCE_ROOT; };
+		"D1D8E03F-BEBB-4252-AA05-0F4F09DDA0E0" /* fbxrenamingstrategyfbx7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxrenamingstrategyfbx7.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxrenamingstrategyfbx7.h; sourceTree = SOURCE_ROOT; };
+		"D1EEFAF3-B037-4EEE-A121-5B23022094AF" /* fbxvector2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxvector2.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxvector2.h; sourceTree = SOURCE_ROOT; };
+		"D2E78745-9F75-45AB-8F93-B84DB354450A" /* fbxeventhandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxeventhandler.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxeventhandler.h; sourceTree = SOURCE_ROOT; };
+		"D33658F9-F93B-4A10-9F73-F44F90AB818A" /* fbxconstraintposition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintposition.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintposition.h; sourceTree = SOURCE_ROOT; };
+		"D4B01C45-C1EF-4EA9-B586-80841F2731DC" /* fbxanimcurvebase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimcurvebase.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimcurvebase.h; sourceTree = SOURCE_ROOT; };
+		"D6F9F25F-BA31-4B03-ABDB-C683A946F700" /* GeometryUtility.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GeometryUtility.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/Common/GeometryUtility.h; sourceTree = SOURCE_ROOT; };
+		"D83738CE-8D3F-43A7-A322-1688E87DAF2A" /* fbxmap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmap.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxmap.h; sourceTree = SOURCE_ROOT; };
+		"D9EF52C8-7932-46C7-B114-7A6FEB2AC788" /* fbxlistener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlistener.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxlistener.h; sourceTree = SOURCE_ROOT; };
+		"DA28DEC8-3EEF-41AA-855A-6ACC200FD586" /* FBX_ASCII_TEXTURE */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 4; name = FBX_ASCII_TEXTURE; path = ../local_addons/ofxHackyFBX/src/FBX_ASCII_TEXTURE; sourceTree = SOURCE_ROOT; };
+		"DBEADE20-D973-4DAE-B032-687D14261311" /* fbxanimcurve.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimcurve.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimcurve.h; sourceTree = SOURCE_ROOT; };
+		"DC962AB6-1441-4ED5-9F7D-F5EC9FB42E3B" /* fbxbitset.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxbitset.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxbitset.h; sourceTree = SOURCE_ROOT; };
+		"DCA71718-F7F2-48B1-B334-4CE365D3C339" /* AnimationUtility.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AnimationUtility.cxx; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/Common/AnimationUtility.cxx; sourceTree = SOURCE_ROOT; };
+		"DCD89369-355B-4D27-BE3A-5A1C07FD25EA" /* fbxembeddedfilesaccumulator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxembeddedfilesaccumulator.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxembeddedfilesaccumulator.h; sourceTree = SOURCE_ROOT; };
+		"DE6B5173-64C6-4455-BE3E-19905927C354" /* fbxevent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxevent.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxevent.h; sourceTree = SOURCE_ROOT; };
+		"E0D04B10-A541-4ED5-9262-BCF704131849" /* fbxselectionnode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxselectionnode.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxselectionnode.h; sourceTree = SOURCE_ROOT; };
+		"E1716D1E-F31E-41CB-8D9A-684EDE113995" /* fbxnurbscurve.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnurbscurve.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxnurbscurve.h; sourceTree = SOURCE_ROOT; };
+		"E29FD358-80DE-42C9-9740-AD223F97431A" /* ofxHackyFBXOld.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxHackyFBXOld.h; path = ../local_addons/ofxHackyFBX/src/ofxHackyFBXOld.h; sourceTree = SOURCE_ROOT; };
+		"E2E66C1E-1E28-480F-B9C0-EAF5DB176C83" /* fbxlayerentryview.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxlayerentryview.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbxlayerentryview.h; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* hackyFBXTestDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackyFBXTestDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		"E510DCF7-0E3A-46DC-9A36-066841BC4148" /* fbxstring.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstring.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxstring.h; sourceTree = SOURCE_ROOT; };
+		"E5856447-3571-4BBF-8DA7-7D5FC0BFBD59" /* fbxscopedloadingdirectory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxscopedloadingdirectory.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxscopedloadingdirectory.h; sourceTree = SOURCE_ROOT; };
+		"E6EDAFD1-BE98-4C00-A125-01A3484EB421" /* fbxprocessorxref.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxprocessorxref.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxprocessorxref.h; sourceTree = SOURCE_ROOT; };
+		"E73F41D5-3B24-4998-8010-9EC88FD6BD72" /* fbxnodeattribute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnodeattribute.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxnodeattribute.h; sourceTree = SOURCE_ROOT; };
+		"E746E907-2B75-4E77-A572-728C77484DFD" /* fbxstatus.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxstatus.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base/fbxstatus.h; sourceTree = SOURCE_ROOT; };
+		"E7CDACB6-AEC4-40FC-885F-5972567EDC95" /* fbxwriter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxwriter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxwriter.h; sourceTree = SOURCE_ROOT; };
+		"E8EC47D1-040C-455A-B36A-88A3601811E6" /* fbxdeformer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxdeformer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxdeformer.h; sourceTree = SOURCE_ROOT; };
+		"E91E7505-A11F-4A82-967F-616AA3ACF67C" /* fbxproceduralgeometry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxproceduralgeometry.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxproceduralgeometry.h; sourceTree = SOURCE_ROOT; };
+		"EA699A03-192E-4593-97EF-3558708F046C" /* fbxcachedeffect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcachedeffect.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxcachedeffect.h; sourceTree = SOURCE_ROOT; };
+		"EBDFF94C-1177-4E4C-ADCC-B632181F6191" /* fbxconstraintsinglechainik.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintsinglechainik.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintsinglechainik.h; sourceTree = SOURCE_ROOT; };
+		"EE9EFFFD-3B35-48CF-B6F5-F24FA390E489" /* SetCamera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SetCamera.h; path = ../local_addons/ofxHackyFBX/src/SetCamera.h; sourceTree = SOURCE_ROOT; };
+		"F042DFAC-2991-4919-9945-617B86669246" /* fbxwriterfbx7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxwriterfbx7.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxwriterfbx7.h; sourceTree = SOURCE_ROOT; };
+		"F0ADDA2F-A400-4AF5-9F38-509725D325A1" /* targa.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = targa.cxx; path = ../local_addons/ofxHackyFBX/src/targa.cxx; sourceTree = SOURCE_ROOT; };
+		"F0D526C7-6786-4D14-B292-40E3FB08D99B" /* fbximplementationfilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbximplementationfilter.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading/fbximplementationfilter.h; sourceTree = SOURCE_ROOT; };
+		"F3D101D2-C12F-4F65-9974-17FF85E3C22D" /* fbxcolladaiostream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcolladaiostream.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada/fbxcolladaiostream.h; sourceTree = SOURCE_ROOT; };
+		"F4AFBFD9-F4A7-449B-BF0C-162FBA544315" /* fbxpropertytypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxpropertytypes.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxpropertytypes.h; sourceTree = SOURCE_ROOT; };
+		"F6227E74-794F-4A78-A762-494339C65BCF" /* fbxvector4.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxvector4.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math/fbxvector4.h; sourceTree = SOURCE_ROOT; };
+		"F6639FD4-3772-4CC5-AADB-024568CEA01C" /* fbxconstraint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraint.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraint.h; sourceTree = SOURCE_ROOT; };
+		"F6B63573-FBE0-4BB2-9498-63D391A65090" /* fbxgenericnode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxgenericnode.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxgenericnode.h; sourceTree = SOURCE_ROOT; };
+		"F6C9AF5B-DDAD-4399-87FA-F7D9E1DBAB04" /* fbxusernotification.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxusernotification.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxusernotification.h; sourceTree = SOURCE_ROOT; };
+		"F8D88987-6AF6-45E8-8CCE-AAE4FA81911E" /* fbxconstraintparent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxconstraintparent.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint/fbxconstraintparent.h; sourceTree = SOURCE_ROOT; };
+		"FABAB142-C0D1-45ED-880D-A1B74B79626B" /* fbxfiletokens.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxfiletokens.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxfiletokens.h; sourceTree = SOURCE_ROOT; };
+		"FB0BA56E-E49C-4C21-BF57-BC6BCF87C36A" /* fbxcontainer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcontainer.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/fbxcontainer.h; sourceTree = SOURCE_ROOT; };
+		"FBC6A047-CD28-4573-8DA1-FB159428E52B" /* fbxperipheral.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxperipheral.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/fbxperipheral.h; sourceTree = SOURCE_ROOT; };
+		"FBFDA7A4-EA7C-41E3-B166-74C2CE75ABE5" /* fbxanimutilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxanimutilities.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation/fbxanimutilities.h; sourceTree = SOURCE_ROOT; };
+		"FC8716E6-7499-4C2D-8963-2DE39AC211C0" /* fbxnamehandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxnamehandler.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxnamehandler.h; sourceTree = SOURCE_ROOT; };
+		"FD1EC7D5-5279-442C-9D14-FD50FB748A3E" /* fbxiosettingspath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxiosettingspath.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbxiosettingspath.h; sourceTree = SOURCE_ROOT; };
+		"FD4B1943-6C7A-45B2-8262-A037EE3702E5" /* fbxreaderfbx5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxreaderfbx5.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx/fbxreaderfbx5.h; sourceTree = SOURCE_ROOT; };
+		"FD9C4A24-DC30-44C7-AA6C-D13B62F9E940" /* fbxcluster.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxcluster.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry/fbxcluster.h; sourceTree = SOURCE_ROOT; };
+		"FFEBF648-7563-4BBA-A4D7-3AA2DC7CF8C0" /* fbxmanipulators.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fbxmanipulators.h; path = ../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils/fbxmanipulators.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		"0E7101B2-AD98-454C-8CB1-1023885692EA" /* ofxHackyFBX */ = {
+			isa = PBXGroup;
+			children = (
+				"82C1F3ED-70CB-47BC-8AD4-A27BED5643DF" /* libs */,
+				"BA271950-5806-4EEB-95D7-27F89F9EF4CD" /* src */,
+			);
+			name = ofxHackyFBX;
+			sourceTree = SOURCE_ROOT;
+		};
+		"199FDA0C-25BE-40EC-B3ED-45646FE01F33" /* constraint */ = {
+			isa = PBXGroup;
+			children = (
+				"98030918-AEB8-4EDD-A023-1CD97DCB26C6" /* fbxcharacter.h */,
+				"05039FA3-935C-49A9-BE6C-E774C5563D01" /* fbxcharacternodename.h */,
+				"B56D82CD-A0E4-4B53-9D0A-E7B4F0867FBA" /* fbxcharacterpose.h */,
+				"F6639FD4-3772-4CC5-AADB-024568CEA01C" /* fbxconstraint.h */,
+				"A25A63A1-7260-4683-A330-80CA3AD76473" /* fbxconstraintaim.h */,
+				"6D5438F8-C10E-4031-8A4C-C0D63058D1BE" /* fbxconstraintcustom.h */,
+				"F8D88987-6AF6-45E8-8CCE-AAE4FA81911E" /* fbxconstraintparent.h */,
+				"D33658F9-F93B-4A10-9F73-F44F90AB818A" /* fbxconstraintposition.h */,
+				"96CEE7BC-25F8-4355-BA48-B9E9BA5185A7" /* fbxconstraintrotation.h */,
+				"8C72D50E-4C04-483F-B0C3-13A9252747C9" /* fbxconstraintscale.h */,
+				"EBDFF94C-1177-4E4C-ADCC-B632181F6191" /* fbxconstraintsinglechainik.h */,
+				"C59F4375-A706-486E-8A65-23DA6C2CA65B" /* fbxconstraintutils.h */,
+				"36F1C5F1-DB3E-45F0-A4DA-D63E89C1391D" /* fbxcontrolset.h */,
+				"66ABA7B0-17A6-4007-B77A-396EB9EB12D2" /* fbxhik2fbxcharacter.h */,
+			);
+			name = constraint;
+			sourceTree = SOURCE_ROOT;
+		};
+		"2A5F3AE5-339B-4EDA-9759-AB04E2E2EA1A" /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				"C6FFC2E6-DD3C-4C8B-AED4-82325D1559F0" /* animation */,
+				"199FDA0C-25BE-40EC-B3ED-45646FE01F33" /* constraint */,
+				"63CDCD70-CE01-4BE4-8270-C29AD5F5806F" /* fbxaudio.h */,
+				"25800FEC-E08B-4AB4-802E-CE31932BE087" /* fbxaudiolayer.h */,
+				"2E661B7A-8204-4A5B-BD4C-66E83FE1AE74" /* fbxaxissystem.h */,
+				"23A2C06A-2B84-417C-8361-C9E113590947" /* fbxcollection.h */,
+				"12FFFECD-C581-4867-BCC4-4592D51A5086" /* fbxcollectionexclusive.h */,
+				"FB0BA56E-E49C-4C21-BF57-BC6BCF87C36A" /* fbxcontainer.h */,
+				"B6B6166C-4AB0-4575-B68C-4EE89F5DE140" /* fbxcontainertemplate.h */,
+				"164AD267-6309-433B-82A7-DB794CE603E6" /* fbxdisplaylayer.h */,
+				"A75D2A93-06B8-4C39-96CE-60EE23E4888B" /* fbxdocument.h */,
+				"9BC7C1FC-1041-4ABC-9E36-C2F641F55B90" /* fbxdocumentinfo.h */,
+				"9CDB6F5F-E316-433B-B37C-92DC5D268A10" /* fbxenvironment.h */,
+				"C04FE0E8-8F1C-4884-91AB-C1C74B8A17F8" /* fbxgroupname.h */,
+				"310FC095-DDA0-4D2C-80F3-A1C97D826ED2" /* fbxlibrary.h */,
+				"2034E808-DF11-4D4A-A9A3-EC481F0308A6" /* fbxmediaclip.h */,
+				"1193D22F-19A3-48BD-869C-2D637CE582E1" /* fbxobjectfilter.h */,
+				"94F7508C-8B94-4309-A817-116269475EEE" /* fbxobjectmetadata.h */,
+				"907D16B5-6496-460E-8E22-E6756935EC6A" /* fbxobjectscontainer.h */,
+				"32B32259-3283-4284-9327-DBB6E713CB0B" /* fbxpose.h */,
+				"CA85C68C-A40E-4915-863C-C77D706114D1" /* fbxreference.h */,
+				"18669A1B-909D-4EFE-BB1B-F94CDD6B3AC9" /* fbxscene.h */,
+				"E0D04B10-A541-4ED5-9262-BCF704131849" /* fbxselectionnode.h */,
+				"C8AE86C1-0FC3-4E33-8487-95B866DE5A00" /* fbxselectionset.h */,
+				"3F83C59B-3EE3-4101-BA7F-E380403E7BE4" /* fbxtakeinfo.h */,
+				"192A4B82-7D66-4749-8DA4-02E07B3E9C35" /* fbxthumbnail.h */,
+				"7AE58964-7542-4788-A4D2-D5683526BFA0" /* fbxvideo.h */,
+				"76D64FB1-DA4E-461E-B2F7-B6646C7B8272" /* geometry */,
+				"2A98F0B7-6637-42A1-9F8C-BCE57CE42F11" /* shading */,
+			);
+			name = scene;
+			sourceTree = SOURCE_ROOT;
+		};
+		"2A98F0B7-6637-42A1-9F8C-BCE57CE42F11" /* shading */ = {
+			isa = PBXGroup;
+			children = (
+				"3DAAAE31-DA20-4860-AEB1-783E21AA62FF" /* fbxbindingoperator.h */,
+				"2D7BB265-2A8A-4EC0-A1AB-1D73DEB9FE88" /* fbxbindingsentryview.h */,
+				"BCE1B739-A937-4CA7-B10A-756500E3C987" /* fbxbindingtable.h */,
+				"5D0C7A76-D277-4106-8F04-4751B5D3CF0C" /* fbxbindingtablebase.h */,
+				"80968CD9-D797-4F2F-BE01-C3C86341E3D7" /* fbxbindingtableentry.h */,
+				"676C9E7F-715F-4C5F-A0B6-BCAD57848831" /* fbxconstantentryview.h */,
+				"58E22C62-0AA7-48FF-9C96-F2A206391244" /* fbxentryview.h */,
+				"BBEBC2E4-D3E3-42E0-952E-436C999750A7" /* fbxfiletexture.h */,
+				"856F48E7-C9F4-41DA-AFFE-AB0E09D2798C" /* fbximplementation.h */,
+				"F0D526C7-6786-4D14-B292-40E3FB08D99B" /* fbximplementationfilter.h */,
+				"8BF9C3F0-5D94-44B5-AA52-68C1C908B5B0" /* fbximplementationutils.h */,
+				"3D1C4D7E-B6E1-4A41-AA99-8AB491EF207E" /* fbxlayeredtexture.h */,
+				"E2E66C1E-1E28-480F-B9C0-EAF5DB176C83" /* fbxlayerentryview.h */,
+				"51BD2307-1F41-4A55-8470-C433074511E7" /* fbxoperatorentryview.h */,
+				"BD5E8F96-D1C1-4AF4-A420-394E0100355F" /* fbxproceduraltexture.h */,
+				"8B208351-67C5-4B44-9CCE-515E86CA61F9" /* fbxpropertyentryview.h */,
+				"6E1CA0B1-261F-4422-8C27-798408EEE6CB" /* fbxsemanticentryview.h */,
+				"BAFC4DD1-9FC9-43A7-813D-367BA40E5399" /* fbxshadingconventions.h */,
+				"210B442B-3D39-400C-ACBF-5EB2C683A2EC" /* fbxsurfacelambert.h */,
+				"969A887D-C359-4F4F-A637-21B5F2837264" /* fbxsurfacematerial.h */,
+				"C50D6621-EE2A-4A9F-9959-6D4E855D08D3" /* fbxsurfacematerialutils.h */,
+				"89C6A6A0-D8E8-4569-8088-E3A85F69121C" /* fbxsurfacephong.h */,
+				"4FDA4770-FBAD-4009-AD52-BA7D6E16F2F4" /* fbxtexture.h */,
+			);
+			name = shading;
+			sourceTree = SOURCE_ROOT;
+		};
+		"52C84E1A-AFBD-4978-B198-841E9BE5CB55" /* fbx */ = {
+			isa = PBXGroup;
+			children = (
+				"684BF990-04E6-4ED1-ABCB-003CA8EE983D" /* fbxio.h */,
+				"FD4B1943-6C7A-45B2-8262-A037EE3702E5" /* fbxreaderfbx5.h */,
+				"3A208A8D-F11A-40EE-96C8-60AB5D48ADF8" /* fbxreaderfbx6.h */,
+				"22D3D047-CC31-4B10-B19E-0AA36A33AFA8" /* fbxreaderfbx7.h */,
+				"7B4374E7-2711-466D-AB99-FC9C085B8C03" /* fbxwriterfbx5.h */,
+				"3BAC03F5-2606-4917-94D2-F32F2E3A6C87" /* fbxwriterfbx6.h */,
+				"F042DFAC-2991-4919-9945-617B86669246" /* fbxwriterfbx7.h */,
+			);
+			name = fbx;
+			sourceTree = SOURCE_ROOT;
+		};
+		"56C223BB-A38C-46C0-97E1-A529F487B685" /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				"A55A0A15-941F-4D49-9CE6-04EC8EB3609B" /* fbxclonemanager.h */,
+				"B7EE1AD5-15C4-4211-86F7-8CFABF216E1A" /* fbxdeformationsevaluator.h */,
+				"DCD89369-355B-4D27-BE3A-5A1C07FD25EA" /* fbxembeddedfilesaccumulator.h */,
+				"0973D442-757A-4A45-BECF-95364678E598" /* fbxgeometryconverter.h */,
+				"FFEBF648-7563-4BBA-A4D7-3AA2DC7CF8C0" /* fbxmanipulators.h */,
+				"18B522E8-D0E4-45CB-847D-75F215A72A3A" /* fbxmaterialconverter.h */,
+				"FC8716E6-7499-4C2D-8963-2DE39AC211C0" /* fbxnamehandler.h */,
+				"8FB744A9-1F91-4211-B8D7-6BD5F7C1FD89" /* fbxprocessor.h */,
+				"CBD2ED24-C24B-48CC-BE32-48B62F6C6728" /* fbxprocessorshaderdependency.h */,
+				"E6EDAFD1-BE98-4C00-A125-01A3484EB421" /* fbxprocessorxref.h */,
+				"2F988A96-401F-49B5-8F99-9779DDE95F96" /* fbxprocessorxrefuserlib.h */,
+				"478CEC31-688D-480D-B649-CCED9C82F57D" /* fbxrenamingstrategy.h */,
+				"9D93FBFC-15C5-436F-9043-B3F051579EF4" /* fbxrenamingstrategybase.h */,
+				"5F2865C3-1222-4CBB-8CB4-5B66AAFA891F" /* fbxrenamingstrategyfbx5.h */,
+				"4C1C6E0F-21E5-4F37-AA3C-1778C6D7B941" /* fbxrenamingstrategyfbx6.h */,
+				"D1D8E03F-BEBB-4252-AA05-0F4F09DDA0E0" /* fbxrenamingstrategyfbx7.h */,
+				"17D6D183-1A9E-430A-9D2B-29E85356CE4F" /* fbxrenamingstrategyutilities.h */,
+				"14DA5AAC-D3E4-4E05-81E7-9F859E42C895" /* fbxrootnodeutility.h */,
+				"AF72E4A4-FB21-4B7D-99CC-982328BED097" /* fbxscenecheckutility.h */,
+				"F6C9AF5B-DDAD-4399-87FA-F7D9E1DBAB04" /* fbxusernotification.h */,
+			);
+			name = utils;
+			sourceTree = SOURCE_ROOT;
+		};
+		"6109A684-5034-441C-9EC5-E2DB5C6A7D13" /* collada */ = {
+			isa = PBXGroup;
+			children = (
+				"A1E37A5B-A1AD-49F4-BFC7-241FFBAD5955" /* fbxcolladaanimationelement.h */,
+				"C214B07C-2A56-4ECD-A221-9434FF0317C8" /* fbxcolladaelement.h */,
+				"F3D101D2-C12F-4F65-9974-17FF85E3C22D" /* fbxcolladaiostream.h */,
+				"524350F8-4092-4C2B-B735-487D6191ACBB" /* fbxcolladanamespace.h */,
+				"15F1B7B2-BB32-4AC8-88FC-4B721D021C09" /* fbxcolladatokens.h */,
+				"BE587F53-BB22-4A21-ABB5-DA37E97E70ED" /* fbxcolladautils.h */,
+				"4315A315-C92F-404C-B6F2-3F0DB2877E1A" /* fbxreadercollada14.h */,
+				"33CA2F4A-9431-488A-A1A9-DF5226527F60" /* fbxwritercollada14.h */,
+			);
+			name = collada;
+			sourceTree = SOURCE_ROOT;
+		};
+		"6C7E7067-09E9-444D-89E1-7263BDC02B28" /* fbx202037 */ = {
+			isa = PBXGroup;
+			children = (
+				"EC3A35DE-27A6-40DC-92D5-4267DAF3ED93" /* include */,
+			);
+			name = fbx202037;
+			sourceTree = SOURCE_ROOT;
+		};
+		"76D64FB1-DA4E-461E-B2F7-B6646C7B8272" /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				"A2BFAD2E-CD35-426C-A8E7-85A91EF55CFB" /* fbxblendshape.h */,
+				"5B6F4AFD-CC0C-4C22-9C7B-F46BBA42E80A" /* fbxblendshapechannel.h */,
+				"39733484-71B4-4CCA-A451-9735398F7DBF" /* fbxcache.h */,
+				"EA699A03-192E-4593-97EF-3558708F046C" /* fbxcachedeffect.h */,
+				"18DE1308-F174-492E-A3B9-BBFC0C97BDEC" /* fbxcamera.h */,
+				"A35CDE6E-7653-44BD-8A26-8B246ECB8252" /* fbxcamerastereo.h */,
+				"5860FA56-644D-4A37-B2DC-CACD43412A66" /* fbxcameraswitcher.h */,
+				"FD9C4A24-DC30-44C7-AA6C-D13B62F9E940" /* fbxcluster.h */,
+				"E8EC47D1-040C-455A-B36A-88A3601811E6" /* fbxdeformer.h */,
+				"F6B63573-FBE0-4BB2-9498-63D391A65090" /* fbxgenericnode.h */,
+				"3639021A-4C8E-4369-9B11-E12C3CD3CC74" /* fbxgeometry.h */,
+				"9BFA16DB-360D-4DD1-A96C-CD9D17FAE44A" /* fbxgeometrybase.h */,
+				"A46428E6-D607-4271-8692-1B9F2AD973CC" /* fbxgeometryweightedmap.h */,
+				"AA143449-ABC5-4082-A896-CE60EFF20532" /* fbxlayer.h */,
+				"774B80C0-E491-43AC-8FFF-4C6FF5A183AC" /* fbxlayercontainer.h */,
+				"B37EAC32-96D6-43FF-8212-4257859E2846" /* fbxlight.h */,
+				"65AC8D07-0DEC-48BA-8C5E-0E080A88E9B3" /* fbxlimitsutilities.h */,
+				"48A75689-EE3C-4159-918B-64BE4E051DB9" /* fbxline.h */,
+				"122243BF-31E7-40EC-86A9-2AE561C0E43E" /* fbxlodgroup.h */,
+				"83555EA7-E6BB-4567-BB6B-501507B78DE0" /* fbxmarker.h */,
+				"8FAF2A6A-097E-4B34-ADDF-C857D9461A9F" /* fbxmesh.h */,
+				"6B5ADF1C-0074-4F29-93F4-7F4DF10E7086" /* fbxnode.h */,
+				"E73F41D5-3B24-4998-8010-9EC88FD6BD72" /* fbxnodeattribute.h */,
+				"A290E47F-0808-4D51-AF4A-255C9C25C891" /* fbxnull.h */,
+				"840FF45A-59EC-426A-B5FC-87EA1CD6E020" /* fbxnurbs.h */,
+				"E1716D1E-F31E-41CB-8D9A-684EDE113995" /* fbxnurbscurve.h */,
+				"D1C44620-5AB3-49CC-A169-7199348C43CE" /* fbxnurbssurface.h */,
+				"2C434BA4-B681-453C-BBB4-0700822257C1" /* fbxopticalreference.h */,
+				"313A2526-2E45-4224-96C9-08675E96630E" /* fbxpatch.h */,
+				"E91E7505-A11F-4A82-967F-616AA3ACF67C" /* fbxproceduralgeometry.h */,
+				"8E3CE60A-FD4A-4F49-8C1D-EB2284A25439" /* fbxshape.h */,
+				"2F5C40DD-D2E6-4B69-8A29-C0273E1C96D5" /* fbxskeleton.h */,
+				"1233660E-F62C-44E0-928B-25BC18560CA2" /* fbxskin.h */,
+				"66721903-1D31-46E7-8E86-3BE40BF0FD91" /* fbxsubdeformer.h */,
+				"5B15755C-BF4A-4B40-8A1D-F6B25E3B55FA" /* fbxsubdiv.h */,
+				"1A5D20C7-6719-4FA8-A06F-F08F46AC5D12" /* fbxtrimnurbssurface.h */,
+				"5BAFF1CB-8A7E-4D65-B83E-4E5088A5611F" /* fbxvertexcachedeformer.h */,
+				"A703663A-61A1-4724-8BCC-8AC97DBF53A6" /* fbxweightedmapping.h */,
+			);
+			name = geometry;
+			sourceTree = SOURCE_ROOT;
+		};
+		"82C1F3ED-70CB-47BC-8AD4-A27BED5643DF" /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				"6C7E7067-09E9-444D-89E1-7263BDC02B28" /* fbx202037 */,
+			);
+			name = libs;
+			sourceTree = SOURCE_ROOT;
+		};
+		"A914598D-D072-4CA7-A032-6C2A75428C16" /* base */ = {
+			isa = PBXGroup;
+			children = (
+				"04F21D52-480B-442E-BAAD-99F95247F279" /* fbxarray.h */,
+				"DC962AB6-1441-4ED5-9F7D-F5EC9FB42E3B" /* fbxbitset.h */,
+				"4B98F3DB-D12F-4E2B-8E81-B2DF633DDD90" /* fbxcharptrset.h */,
+				"4AD4DFAD-74EA-4488-84C5-8E06EC00E5F0" /* fbxcontainerallocators.h */,
+				"190861A8-E038-4FBB-81AE-7C78F2DA5B44" /* fbxdynamicarray.h */,
+				"92228EEB-BFF1-4C52-859D-91670BE2C270" /* fbxfile.h */,
+				"097FEDDE-BB3F-4CB8-A453-349ECAA937B4" /* fbxfolder.h */,
+				"169DD447-2F7B-4232-A1FE-FDA73246EFD0" /* fbxhashmap.h */,
+				"74D3755F-BE4C-4D9C-BF0C-73329359BA72" /* fbxintrusivelist.h */,
+				"D83738CE-8D3F-43A7-A322-1688E87DAF2A" /* fbxmap.h */,
+				"3A20CE9D-2E0E-4C1C-BED0-4478A0891002" /* fbxmemorypool.h */,
+				"05BAEF61-674C-43D4-B99E-FF9B8F405EC3" /* fbxmultimap.h */,
+				"5C12667B-84E8-45E4-8EB5-C91397307C62" /* fbxpair.h */,
+				"0B7B5691-6E88-430B-AC69-C58B0B12F1C4" /* fbxredblacktree.h */,
+				"6B51F7F1-113B-4D0F-9134-1965BB677B87" /* fbxset.h */,
+				"E746E907-2B75-4E77-A572-728C77484DFD" /* fbxstatus.h */,
+				"E510DCF7-0E3A-46DC-9A36-066841BC4148" /* fbxstring.h */,
+				"ADEB72F2-C57B-48F0-BE81-86DB05EEA93B" /* fbxstringlist.h */,
+				"CCFD17D1-6C01-490B-9182-BE5FCC28FEED" /* fbxtime.h */,
+				"7CD20A4E-CA71-4063-8FD3-475484A6D932" /* fbxtimecode.h */,
+				"0745EA14-66D4-451C-9B3D-F09E0696CD50" /* fbxutils.h */,
+			);
+			name = base;
+			sourceTree = SOURCE_ROOT;
+		};
+		"B16227F2-0443-4101-A185-0A2D41DDD546" /* fbxsdk */ = {
+			isa = PBXGroup;
+			children = (
+				"C59A0B32-B868-43A1-AFE1-79839E525242" /* core */,
+				"6CFE82DE-DCBE-4E91-8AC9-AAD9F1B7FAA8" /* fbxsdk_def.h */,
+				"22C44E92-2563-42BF-991E-426852882F6D" /* fbxsdk_nsbegin.h */,
+				"B8C3D919-A9AA-4742-85E1-3286123333C0" /* fbxsdk_nsend.h */,
+				"38F51379-3FB7-4775-B49F-DFC4923B0F6A" /* fbxsdk_version.h */,
+				"F729D651-0ADB-402F-93C0-F9E261F882F1" /* fileio */,
+				"2A5F3AE5-339B-4EDA-9759-AB04E2E2EA1A" /* scene */,
+				"56C223BB-A38C-46C0-97E1-A529F487B685" /* utils */,
+			);
+			name = fbxsdk;
+			sourceTree = SOURCE_ROOT;
+		};
+		"BA271950-5806-4EEB-95D7-27F89F9EF4CD" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"129C9B20-8025-44C2-944F-8BE11FB54150" /* DrawScene.cxx */,
+				"3C087595-21C7-422B-AA12-41057A3AE76D" /* DrawScene.h */,
+				"39C8BBA5-4E2F-4F24-B957-A49C6B53B32A" /* DrawText.cxx */,
+				"C2C204C9-F11C-4F89-BBDA-7FD494CE2775" /* DrawText.h */,
+				"DA28DEC8-3EEF-41AA-855A-6ACC200FD586" /* FBX_ASCII_TEXTURE */,
+				"C03CC026-A87B-4040-8F6D-5E404523FB27" /* GetPosition.cxx */,
+				"29BE5956-E7CE-41C7-94E9-10016A4D1158" /* GetPosition.h */,
+				"56E6745F-EB1D-4FD6-9CFE-1B2725FBC862" /* GlFunctions.cxx */,
+				"42CCC583-6979-4EDD-937D-27D40D7A3885" /* GlFunctions.h */,
+				"8953EEEF-F59B-4210-A989-ED934989ACE6" /* SceneCache.cxx */,
+				"3F4CA1AB-9EA6-44E3-ADD7-856918E614ED" /* SceneCache.h */,
+				"74F42AD1-B637-4A0E-B03D-B761AFC49B12" /* SceneContext.cxx */,
+				"606BA6D0-229C-4EF8-82A0-742605EF8F6A" /* SceneContext.h */,
+				"28687E5E-0996-4F67-AA30-DB94F10FA81C" /* SetCamera.cxx */,
+				"EE9EFFFD-3B35-48CF-B6F5-F24FA390E489" /* SetCamera.h */,
+				"9C41530F-2CD3-4F69-9AEB-0947E07CB867" /* ofxHackyFBX.cpp */,
+				"9D0275BF-4B2F-485A-96F9-D717F0F873B7" /* ofxHackyFBX.h */,
+				"2848D54C-64A6-42AD-B295-019C4002F41F" /* ofxHackyFBXOld.cpp */,
+				"E29FD358-80DE-42C9-9740-AD223F97431A" /* ofxHackyFBXOld.h */,
+				"F0ADDA2F-A400-4AF5-9F38-509725D325A1" /* targa.cxx */,
+				"005F89AE-FB24-4F28-88D5-11E7212E4D9D" /* targa.h */,
+			);
+			name = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = addons;
+			path = /Users/neil/Projects/openFrameworks/addons;
+			sourceTree = "<group>";
+		};
+		"C59A0B32-B868-43A1-AFE1-79839E525242" /* core */ = {
+			isa = PBXGroup;
+			children = (
+				"E522C646-1AD4-4B04-90C6-79A7C32B6BFA" /* arch */,
+				"A914598D-D072-4CA7-A032-6C2A75428C16" /* base */,
+				"79595413-BD0B-4418-8E2B-25040691D2BB" /* fbxclassid.h */,
+				"8D828F82-0A21-4CCD-8336-56CE37BF6838" /* fbxconnectionpoint.h */,
+				"BFE3F475-6184-4FA8-A74F-D38BD674A618" /* fbxdatatypes.h */,
+				"93EB3119-1AFE-4E2C-BAA6-653B6B3E4C23" /* fbxemitter.h */,
+				"DE6B5173-64C6-4455-BE3E-19905927C354" /* fbxevent.h */,
+				"D2E78745-9F75-45AB-8F93-B84DB354450A" /* fbxeventhandler.h */,
+				"D9EF52C8-7932-46C7-B114-7A6FEB2AC788" /* fbxlistener.h */,
+				"72C8F135-4AA3-4E76-ACAF-4DDA6A29859E" /* fbxloadingstrategy.h */,
+				"48C62CD3-87CC-42C9-BE5D-58F275452023" /* fbxmanager.h */,
+				"60A109C1-4362-4633-BA84-1448E2F6CBF3" /* fbxmodule.h */,
+				"9F377325-7D93-4329-B431-D890C0D6C587" /* fbxobject.h */,
+				"FBC6A047-CD28-4573-8DA1-FB159428E52B" /* fbxperipheral.h */,
+				"A98E1CBC-4374-4C2B-9EA7-77189E142FDD" /* fbxplugin.h */,
+				"3248475C-9563-475F-BE66-57E9915812A2" /* fbxplugincontainer.h */,
+				"503FFC50-13B6-428B-85C7-0EAFF40FE4FB" /* fbxproperty.h */,
+				"38FA753F-23C4-488D-951F-ADD0E2D1E8F4" /* fbxpropertydef.h */,
+				"B4E9C92A-5CFB-44C1-BEC0-8BC3AB707398" /* fbxpropertyhandle.h */,
+				"4334318B-C071-4E63-94CC-4BE69C55ADAD" /* fbxpropertypage.h */,
+				"F4AFBFD9-F4A7-449B-BF0C-162FBA544315" /* fbxpropertytypes.h */,
+				"040E3CB5-A56B-4D53-B14B-67B8BB6961E1" /* fbxquery.h */,
+				"56409FF1-D50E-4F27-8FE8-6B8357E25EB6" /* fbxqueryevent.h */,
+				"E5856447-3571-4BBF-8DA7-7D5FC0BFBD59" /* fbxscopedloadingdirectory.h */,
+				"CC2A1BD0-AB89-4980-ACAE-D4C4F113F1DA" /* fbxscopedloadingfilename.h */,
+				"20957C89-1C6D-4EC0-8BA5-38BBA72A976D" /* fbxstream.h */,
+				"941E9EF0-9D54-48DB-979B-890D1FD68E2D" /* fbxsymbol.h */,
+				"A5DA1620-1E50-42F0-9DF1-53B39719ACAB" /* fbxsystemunit.h */,
+				"CB817E60-AC4C-40B6-AA41-31D5F82C06C3" /* fbxxref.h */,
+				"C942F773-C622-4252-A309-6FEA411F1AD5" /* math */,
+				"F054826E-59FD-4C67-BB4D-BAC0A5CE8085" /* sync */,
+			);
+			name = core;
+			sourceTree = SOURCE_ROOT;
+		};
+		"C6FFC2E6-DD3C-4C8B-AED4-82325D1559F0" /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				"DBEADE20-D973-4DAE-B032-687D14261311" /* fbxanimcurve.h */,
+				"D4B01C45-C1EF-4EA9-B586-80841F2731DC" /* fbxanimcurvebase.h */,
+				"1F8D4FB9-3E7F-4B58-990E-201A113F70CF" /* fbxanimcurvefilters.h */,
+				"C96F3967-4A58-4F64-884B-22AC5C08E4DB" /* fbxanimcurvenode.h */,
+				"8930582E-5187-437F-BBCF-4CCEE52D4DFF" /* fbxanimevalclassic.h */,
+				"64DDDBD0-CEBD-4427-A06A-DC10D1ADF54F" /* fbxanimevalstate.h */,
+				"22CBB18B-1186-4308-8DE5-01AC4B1D7075" /* fbxanimevaluator.h */,
+				"CD85B8BE-4AB3-48FD-9A2D-C39CAA0319F2" /* fbxanimlayer.h */,
+				"51A9192C-93C1-4156-8CB5-15175F942C91" /* fbxanimstack.h */,
+				"FBFDA7A4-EA7C-41E3-B166-74C2CE75ABE5" /* fbxanimutilities.h */,
+			);
+			name = animation;
+			sourceTree = SOURCE_ROOT;
+		};
+		"C942F773-C622-4252-A309-6FEA411F1AD5" /* math */ = {
+			isa = PBXGroup;
+			children = (
+				"6E7259D9-20A5-4C6F-B588-93A89ED6A191" /* fbxaffinematrix.h */,
+				"197EC1A5-C90E-440E-9EE7-CCD7FFE3F975" /* fbxdualquaternion.h */,
+				"1558024B-D6F6-41D2-92B4-3FAB359E3E31" /* fbxmath.h */,
+				"90AD049F-0B0C-4B33-B814-D9637108930C" /* fbxmatrix.h */,
+				"BF1ED355-3501-449E-88F6-EE8A3C6E6068" /* fbxquaternion.h */,
+				"586C97A8-8561-402D-91EB-C8B9D4579725" /* fbxtransforms.h */,
+				"D1EEFAF3-B037-4EEE-A121-5B23022094AF" /* fbxvector2.h */,
+				"F6227E74-794F-4A78-A762-494339C65BCF" /* fbxvector4.h */,
+			);
+			name = math;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				191CD6FA2847E21E0085CBB6 /* of.entitlements */,
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				191EF70929D778A400F35F26 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E4B69B5B0A3A1756003C02F2 /* hackyFBXTestDebug.app */,
+				"FBA6B972-B956-47A0-B125-5257C06CCDE7" /* local_addons */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		"E522C646-1AD4-4B04-90C6-79A7C32B6BFA" /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				"644E1027-D909-4B1D-8DC5-412957238480" /* fbxalloc.h */,
+				"A6DD1483-1292-48E5-8EB7-E6E236CEE5EE" /* fbxarch.h */,
+				"7B1E3804-E8C8-4BEB-A5A2-11EE03890450" /* fbxdebug.h */,
+				"276A0047-CFDA-4914-98D1-0E42D84CC3C6" /* fbxnew.h */,
+				"9C06A28B-EEDA-4931-A529-BA1B8AA44576" /* fbxstdcompliant.h */,
+				"1CE04963-EE66-47CF-A7CB-0B5A90F6BA18" /* fbxtypes.h */,
+			);
+			name = arch;
+			sourceTree = SOURCE_ROOT;
+		};
+		"EC3A35DE-27A6-40DC-92D5-4267DAF3ED93" /* include */ = {
+			isa = PBXGroup;
+			children = (
+				"FBED5BE7-549F-44A9-98D9-93065BA2ADD0" /* Common */,
+				"617549A4-5801-4023-9166-F47058321121" /* fbxsdk.h */,
+				"B16227F2-0443-4101-A185-0A2D41DDD546" /* fbxsdk */,
+			);
+			name = include;
+			sourceTree = SOURCE_ROOT;
+		};
+		"F054826E-59FD-4C67-BB4D-BAC0A5CE8085" /* sync */ = {
+			isa = PBXGroup;
+			children = (
+				"D0408AC2-2634-48E3-85E6-A88323D114EC" /* fbxatomic.h */,
+				"441FE37C-4B25-40A9-A27B-FCA72266410B" /* fbxclock.h */,
+				"0FDD3B3B-219F-4A11-9026-E38269583684" /* fbxsync.h */,
+				"AAA199D1-B005-475B-B7CA-F8C4FE29C80B" /* fbxthread.h */,
+			);
+			name = sync;
+			sourceTree = SOURCE_ROOT;
+		};
+		"F729D651-0ADB-402F-93C0-F9E261F882F1" /* fileio */ = {
+			isa = PBXGroup;
+			children = (
+				"6109A684-5034-441C-9EC5-E2DB5C6A7D13" /* collada */,
+				"52C84E1A-AFBD-4978-B198-841E9BE5CB55" /* fbx */,
+				"C6207D1F-F355-4C6F-943E-1BD96D1BE51E" /* fbxbase64coder.h */,
+				"12F87D31-51C1-43CE-A9A7-AAEE4E7872DD" /* fbxcallbacks.h */,
+				"62D9FC56-9D25-4F17-AC95-A6ADAC953E6B" /* fbxexporter.h */,
+				"A8BBB38F-EB9B-4E61-A7BB-B19ACC9F07C9" /* fbxexternaldocreflistener.h */,
+				"FABAB142-C0D1-45ED-880D-A1B74B79626B" /* fbxfiletokens.h */,
+				"A2C2D5AA-0593-4A5C-BE2B-2B02B0E10047" /* fbxglobalcamerasettings.h */,
+				"BA06BE2F-3886-4F80-B8CA-C44097DFC1B7" /* fbxgloballightsettings.h */,
+				"46E67248-04D2-4D0C-BDAF-280A0F6FA2CF" /* fbxglobalsettings.h */,
+				"3781086C-4EE9-4B86-B27D-B8E412658D71" /* fbxgobo.h */,
+				"49DBA9E2-D92D-4E3C-A246-275B7E82CFC4" /* fbximporter.h */,
+				"1D819958-01A6-46B8-9615-01E6754FC37A" /* fbxiobase.h */,
+				"AC4FF3F3-E322-4C31-97E4-65A4FD45B873" /* fbxiopluginregistry.h */,
+				"5CF506BB-6586-466C-B2BA-76C1921674D6" /* fbxiosettings.h */,
+				"FD1EC7D5-5279-442C-9D14-FD50FB748A3E" /* fbxiosettingspath.h */,
+				"BF801BED-B5F8-4CE4-B471-5B4B3F4A7D1C" /* fbxprogress.h */,
+				"713EE1E2-FF35-4E8C-B071-A633C65207E3" /* fbxreader.h */,
+				"CD28D2E4-62D2-4EF0-9790-54391534A8C5" /* fbxstatistics.h */,
+				"532D7D4A-F417-4C45-AA4F-7A0FA08B7BF9" /* fbxstatisticsfbx.h */,
+				"E7CDACB6-AEC4-40FC-885F-5972567EDC95" /* fbxwriter.h */,
+			);
+			name = fileio;
+			sourceTree = SOURCE_ROOT;
+		};
+		"FBA6B972-B956-47A0-B125-5257C06CCDE7" /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+				"0E7101B2-AD98-454C-8CB1-1023885692EA" /* ofxHackyFBX */,
+			);
+			name = local_addons;
+			sourceTree = SOURCE_ROOT;
+		};
+		"FBED5BE7-549F-44A9-98D9-93065BA2ADD0" /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				"DCA71718-F7F2-48B1-B334-4CE365D3C339" /* AnimationUtility.cxx */,
+				"9E4463A9-1B10-419C-A682-1ECBF98A5C3F" /* AnimationUtility.h */,
+				"15927DEB-8698-45C9-8BB2-166CF8E9363D" /* Common.cxx */,
+				"8A42A5AC-F33F-4F0D-891B-1DF4495323E9" /* Common.h */,
+				"897989BA-F4E4-4F5A-BA2C-F6484D4EFF80" /* GeometryUtility.cxx */,
+				"D6F9F25F-BA31-4B03-ABDB-C683A946F700" /* GeometryUtility.h */,
+			);
+			name = Common;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* hackyFBXTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "hackyFBXTest" */;
+			buildPhases = (
+				E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */,
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				E4A5B60F29BAAAE400C2D356 /* CopyFiles */,
+				19B789C429E5AB4A0082E9B8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hackyFBXTest;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* hackyFBXTestDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "hackyFBXTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* hackyFBXTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19B789C429E5AB4A0082E9B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script — Compile OF";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				"3A7D72BF-2297-47CC-87F5-478B83E8FAE4" /* AnimationUtility.cxx in Sources */,
+				"1242BD3E-707C-4A2F-940F-902A66B66617" /* Common.cxx in Sources */,
+				"A2CB5BCC-5973-4E27-B7AD-2FA4AF5EAC2F" /* GeometryUtility.cxx in Sources */,
+				"C4D31493-0C45-4313-85F4-9DE0BEB538C6" /* DrawScene.cxx in Sources */,
+				"DAEAE34A-CFD1-47A1-8018-DC330B2F05E1" /* DrawText.cxx in Sources */,
+				"7F628ABC-9F43-4EFC-B957-1C62FBC5A8E7" /* FBX_ASCII_TEXTURE in Sources */,
+				"45157B3F-8ACE-46C3-871D-53080053C651" /* GetPosition.cxx in Sources */,
+				"818AD3F7-6260-4A09-B3BC-8232A67FDC77" /* GlFunctions.cxx in Sources */,
+				"A6DDC264-9F0C-45B1-8A20-FEE79F45A8BE" /* SceneCache.cxx in Sources */,
+				"ABB72918-EEDF-4B77-B255-68CA5305C52C" /* SceneContext.cxx in Sources */,
+				"B4552CC4-4AA8-4633-8C4D-C73F713AB537" /* SetCamera.cxx in Sources */,
+				"94CF1199-2D11-43A4-BE91-DDEF9BDFD191" /* ofxHackyFBX.cpp in Sources */,
+				"52BA91BB-8904-4132-92AD-39CD4DAB48F5" /* ofxHackyFBXOld.cpp in Sources */,
+				"F3C57821-F36D-41AF-BAF9-76EF578F4951" /* targa.cxx in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../local_addons/ofxHackyFBX/libs,
+					../local_addons/ofxHackyFBX/libs/fbx202037,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/Common,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/sync,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils,
+					../local_addons/ofxHackyFBX/libs/fbx202037/lib,
+					../local_addons/ofxHackyFBX/libs/fbx202037/lib/linux64,
+					../local_addons/ofxHackyFBX/src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+					"-lxml2",
+					"-liconv",
+					"/Users/neil/Projects/of_v0.12.0_osx_release/apps/silicon-selfie/local_addons/ofxHackyFBX/libs/fbx202037/lib/osx/libfbxsdk.a",
+				);
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../local_addons/ofxHackyFBX/libs,
+					../local_addons/ofxHackyFBX/libs/fbx202037,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/Common,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/arch,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/base,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/math,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/core/sync,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/collada,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/fileio/fbx,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/animation,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/constraint,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/geometry,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/scene/shading,
+					../local_addons/ofxHackyFBX/libs/fbx202037/include/fbxsdk/utils,
+					../local_addons/ofxHackyFBX/libs/fbx202037/lib,
+					../local_addons/ofxHackyFBX/libs/fbx202037/lib/linux64,
+					../local_addons/ofxHackyFBX/src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+					"-lxml2",
+					"-liconv",
+				);
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "hackyFBXTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "hackyFBXTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
