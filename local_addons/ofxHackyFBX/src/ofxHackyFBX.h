@@ -33,6 +33,7 @@ public:
     void logScene();
     void setPoseIndex(int index) { mPoseIndex = index; }
     void findBlendShapes();
+    void setBlendShapePercent(const string& name, float percent);
 
     Status GetStatus() const { return mStatus; }
 
@@ -91,12 +92,13 @@ public:
     void            SetZoomMode( CameraZoomMode pZoomMode);       
 
 private:
-    void findBlendShapesRecursive(FbxNode* pNode, vector<string>& shapes);
+    void findBlendShapesRecursive(FbxNode* pNode);
 
     vector<shared_ptr<ofImage>> textures;
     void LoadCacheRecursive(FbxScene * pScene, FbxAnimLayer * pAnimLayer, const char * pFbxFileName, bool pSupportVBO);
     void LoadCacheRecursive(FbxNode * pNode, FbxAnimLayer * pAnimLayer, bool pSupportVBO);
     bool LoadTextureFromFile(const FbxString & pFilePath, unsigned int & pTextureObject);
+    map<string, FbxBlendShapeChannel*> blendShapes;
 
     // Display information about current status in the left-up corner of the window.
     void DisplayWindowMessage();

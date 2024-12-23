@@ -324,10 +324,14 @@ void ComputeShapeDeformation(FbxMesh* pMesh, FbxTime& pTime, FbxAnimLayer * pAni
 			FbxBlendShapeChannel* lChannel = lBlendShape->GetBlendShapeChannel(lChannelIndex);
 			if(lChannel)
 			{
+				// MEGA HACK
+				// TODO: FIX TO USES ANIM WEIGHTS, NOT JUST MY SET ONES
+				double lWeight = lChannel->DeformPercent.Get();
+
 				// Get the percentage of influence on this channel.
-				FbxAnimCurve* lFCurve = pMesh->GetShapeChannel(lBlendShapeIndex, lChannelIndex, pAnimLayer);
-				if (!lFCurve) continue;
-				double lWeight = lFCurve->Evaluate(pTime);
+				//FbxAnimCurve* lFCurve = pMesh->GetShapeChannel(lBlendShapeIndex, lChannelIndex, pAnimLayer);
+				//if (!lFCurve) continue;
+				//double lWeight = lFCurve->Evaluate(pTime);
 
 				/*
 				If there is only one targetShape on this channel, the influence is easy to calculate:

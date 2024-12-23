@@ -304,13 +304,21 @@ ofxHackyFBX::~ofxHackyFBX()
 	DestroySdkObjects(mSdkManager, true);
 }
 
-void ofxHackyFBX::findBlendShapes()
+void ofxHackyFBX::setBlendShapePercent(const string& name, float percent)
 {
-    vector<string> shapes;
-    findBlendShapesRecursive(mScene->GetRootNode(), shapes);
+    if (blendShapes.find(name) != blendShapes.end())
+    {
+        blendShapes[name]->DeformPercent.Set(percent);
+        mStatus = MUST_BE_REFRESHED;
+    }
 }
 
-void ofxHackyFBX::findBlendShapesRecursive(FbxNode* node, vector<string>& shapes)
+void ofxHackyFBX::findBlendShapes()
+{
+    findBlendShapesRecursive(mScene->GetRootNode());
+}
+
+void ofxHackyFBX::findBlendShapesRecursive(FbxNode* node)
 {
     if (node && node->GetNodeAttribute() && node->GetNodeAttribute()->GetAttributeType() == FbxNodeAttribute::eMesh)
     {
@@ -325,7 +333,13 @@ void ofxHackyFBX::findBlendShapesRecursive(FbxNode* node, vector<string>& shapes
                 for (int channelIndex = 0; channelIndex < blendShape->GetBlendShapeChannelCount(); ++channelIndex)
                 {
                     FbxBlendShapeChannel* channel = blendShape->GetBlendShapeChannel(channelIndex);
-                    int targetShapeCount = channel->GetTargetShapeCount();
+                    blendShapes[channel->GetName()] = channel;
+                    cout << "added shape: " << channel->GetName() << endl;
+                    /*for (int shapeIndex = 0; shapeIndex < channel->GetTargetShapeCount(); ++shapeIndex)
+                    {
+                        FbxShape* shape = channel->GetTargetShape(shapeIndex);
+                    }*/
+                    /*
                     for (int shapeIndex = 0; shapeIndex < targetShapeCount; ++shapeIndex)
                     {
                         FbxShape* shape = channel->GetTargetShape(shapeIndex);
@@ -333,7 +347,7 @@ void ofxHackyFBX::findBlendShapesRecursive(FbxNode* node, vector<string>& shapes
                         cout << "  BlendShape: " << blendShape->GetName()
                                       << ", Channel: " << channelIndex
                                       << ", Shape: " << shapeName << endl;
-                    }
+                    }*/
                 }
             }
         }
@@ -341,7 +355,7 @@ void ofxHackyFBX::findBlendShapesRecursive(FbxNode* node, vector<string>& shapes
     }
     for (int i = 0; i < node->GetChildCount(); i++)
     {
-        findBlendShapesRecursive(node->GetChild(i), shapes);
+        findBlendShapesRecursive(node->GetChild(i));
     }
 }
 
